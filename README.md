@@ -1,3 +1,3 @@
 # Trabalho de TP1
 
-Descrição genérica do trabalho
+Descrição genérica do trabalho.
