@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1615429936 source:c:\users\intel\desktop\tp1_trab_1\dominiostp1.cpp
+	"dominiosTP1.h"
+
+1615429936 c:\users\intel\desktop\tp1_trab_1\dominiostp1.h
+	<iostream>
+	<stdexcept>
+
+1615429936 source:c:\users\intel\desktop\tp1_trab_1\maintp1.cpp
+	<iostream>
+	"dominiosTP1.h"
+	"testesTP1.h"
+
+1615429936 c:\users\intel\desktop\tp1_trab_1\testestp1.h
+	"dominiosTP1.h"
+
+1615429936 source:c:\users\intel\desktop\tp1_trab_1\testestp1.cpp
+	"testesTP1.h"
+
