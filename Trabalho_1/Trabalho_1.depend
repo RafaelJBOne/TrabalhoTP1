@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1615868581 source:c:\users\kelson\desktop\trabalho_1\n_dominios.cpp
+	"n_dominios.h"
+
+1615868592 c:\users\kelson\desktop\trabalho_1\n_dominios.h
+	<iostream>
+	<stdexcept>
+
+1615869462 source:c:\users\kelson\desktop\trabalho_1\n_main.cpp
+	<iostream>
+	"n_dominios.h"
+	"n_testes.h"
+
+1615870792 c:\users\kelson\desktop\trabalho_1\n_testes.h
+	"n_dominios.h"
+
+1615869443 source:c:\users\kelson\desktop\trabalho_1\n_testes.cpp
+	"n_testes.h"
+
