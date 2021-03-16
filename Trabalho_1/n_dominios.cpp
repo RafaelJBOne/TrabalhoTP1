@@ -72,154 +72,52 @@ bool Email::validar(string valor){
     }
 }
 
-/*
 Codigo::Codigo(){
     valor = DEFAULT;
 }
 
-Codigo::Codigo(int valor){
+Codigo::Codigo(string valor){
     this->valor = valor;
 }
 
-bool Codigo::validar(int valor){
-    if (){
+void Codigo::setValor(string valor){
+    if (validar(valor)){
+        this->valor = valor;
+    }else{
+        throw invalid_argument("Argumento invalido.");
+    }
+}
+
+bool Codigo::validar(string valor){
+
+   //validacao de parametros de codigo
+   string nome_codigo = "00000", variavel_letra = "a";
+   int i = 0;
+   //laco para percorer o nome
+   if(nome_codigo[0] == 48 && nome_codigo[1] == 48 && nome_codigo[2] == 48 && nome_codigo[3]== 48 && nome_codigo[4]== 48){
+       return false;
+   }
+   while(nome_codigo[i] != '\0'){
+        //conferindo se na posicao do iesimo eh letra maiuscula
+       if (nome_codigo[i] >= 65 && nome_codigo[i] <= 90){
+            i++;
+            continue;
+        }
+        //conferindo se na posicao do iesimo eh algum numero
+        if (nome_codigo[i] >= 48 && nome_codigo[i] <= 57){
+            i++;
+            continue;
+        }
+        if (nome_codigo[i] < 65 && nome_codigo[i] > 90 && nome_codigo[i] < 48 && nome_codigo[i] > 57){
+            i++;
+            cout << "x MINUSCULO NAO EH VALIDO" << endl;
+            return false;
+        }
+   }
+   //pega o valor de i e verifica se ele eh menor que 1 e maior que 5
+    if(i != 5){
+        //cout << "IF FORA DO WHILE" << endl;
         return false;
     }
     return true;
 }
-
-Classe::Classe(){
-    valor = DEFAULT;
-}
-
-Classe::Classe(int valor){
-    this->valor = valor;
-}
-
-bool Classe::validar(int valor){
-    if (){
-        return false;
-    }
-    return true;
-}
-
-Descricao::Descricao(){
-    valor = DEFAULT;
-}
-
-Descricao::Descricao(int valor){
-    this->valor = valor;
-}
-
-bool Descricao::validar(int valor){
-    if (){
-        return false;
-    }
-    return true;
-}
-
-Endereco::Endereco(){
-    valor = DEFAULT;
-}
-
-Endereco::Endereco(int valor){
-    this->valor = valor;
-}
-
-bool Endereco::validar(int valor){
-    if (){
-        return false;
-    }
-    return true;
-}
-
-Data::Data(){
-    valor = DEFAULT;
-}
-
-Data::Data(int valor){
-    this->valor = valor;
-}
-
-bool Data::validar(int valor){
-    if (){
-        return false;
-    }
-    return true;
-}
-
-Moeda::Moeda(){
-    valor = DEFAULT;
-}
-
-Moeda::Moeda(int valor){
-    this->valor = valor;
-}
-
-bool Moeda::validar(int valor){
-    if (){
-        return false;
-    }
-    return true;
-}
-
-Nome::Nome(){
-    valor = DEFAULT;
-}
-
-Nome::Nome(int valor){
-    this->valor = valor;
-}
-
-bool Nome::validar(int valor){
-    if (){
-        return false;
-    }
-    return true;
-}
-
-Email::Email(){
-    valor = DEFAULT;
-}
-
-Email::Email(int valor){
-    this->valor = valor;
-}
-
-bool Email::validar(int valor){
-    if (){
-        return false;
-    }
-    return true;
-}
-
-Senha::Senha(){
-    valor = DEFAULT;
-}
-
-Senha::Senha(int valor){
-    this->valor = valor;
-}
-
-bool Senha::validar(int valor){
-    if (){
-        return false;
-    }
-    return true;
-}
-
-Telefone::Telefone(){
-    valor = DEFAULT;
-}
-
-Telefone::Telefone(int valor){
-    this->valor = valor;
-}
-
-bool Telefone::validar(int valor){
-    if (){
-        return false;
-    }
-    return true;
-}
-*/

@@ -8,9 +8,9 @@ using namespace std;
 
 
 int main(){
-    TUNumero teste;
+    TUNumero testeA;
 
-    switch(teste.executar()){
+    switch(testeA.executar()){
         case TUNumero::SUCESSO: cout << "SUCESSO - NUMERO" << endl;
                                 break;
         case TUNumero::FALHA  : cout << "FALHA   - NUMERO" << endl;
@@ -19,13 +19,21 @@ int main(){
 
     TUEmail testeB;
 
-    switch(teste.executar()){
+    switch(testeB.executar()){
         case TUNumero::SUCESSO: cout << "SUCESSO - EMAIL" << endl;
                                 break;
         case TUNumero::FALHA  : cout << "FALHA   - EMAIL" << endl;
                                 break;
     }
     //cout << testeA.FALHA; print do c++
+    TUCodigo testeC;
+
+    switch(testeC.executar()){
+        case TUCodigo::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+                                break;
+        case TUCodigo::FALHA  : cout << "FALHA   - CODIGO" << endl;
+                                break;
+    }
 
     return 0;
 }

@@ -72,17 +72,16 @@ public:
     // void testarCenario();
 };
 
-/*
-class TUCodigo {
+class TUCodigo{
 private:
 
     // Definições de constantes para evitar números mágicos.
 
-    const static int VALOR_VALIDO   = ;
-    const static int VALOR_INVALIDO = ;
+    const string VALOR_VALIDO   = "XXXXX";
+    const string VALOR_INVALIDO = "XXXXx";
 
     // Referência para o objeto a ser testado.
-    Numero *numero;
+    Codigo *codigo;
 
 
     // Estado do teste.
@@ -91,326 +90,20 @@ private:
 
     // Declarações de métodos.
 
-   // void setUp();
-    void tearDown();
+    void setUp();
     void testarCenarioSucesso();
     void testarCenarioFalha();
+    void tearDown();
 
 public:
 
     // Definições de constantes para reportar resultado do teste.
-    void setUp();
+
     const static int SUCESSO =  0;
     const static int FALHA   = -1;
 
-    bool executar();
-    void testarCenario();
+    int executar();
+    // void testarCenario();
 };
 
-class TUClasse {
-private:
-
-    // Definições de constantes para evitar números mágicos.
-
-    const static int VALOR_VALIDO   = ;
-    const static int VALOR_INVALIDO = ;
-
-    // Referência para o objeto a ser testado.
-    Numero *numero;
-
-
-    // Estado do teste.
-
-    int estado;
-
-    // Declarações de métodos.
-
-   // void setUp();
-    void tearDown();
-    void testarCenarioSucesso();
-    void testarCenarioFalha();
-
-public:
-
-    // Definições de constantes para reportar resultado do teste.
-    void setUp();
-    const static int SUCESSO =  0;
-    const static int FALHA   = -1;
-
-    bool executar();
-    void testarCenario();
-};
-
-class TUDescricao {
-private:
-
-    // Definições de constantes para evitar números mágicos.
-
-    const static int VALOR_VALIDO   = ;
-    const static int VALOR_INVALIDO = ;
-
-    // Referência para o objeto a ser testado.
-    Numero *numero;
-
-
-    // Estado do teste.
-
-    int estado;
-
-    // Declarações de métodos.
-
-   // void setUp();
-    void tearDown();
-    void testarCenarioSucesso();
-    void testarCenarioFalha();
-
-public:
-
-    // Definições de constantes para reportar resultado do teste.
-    void setUp();
-    const static int SUCESSO =  0;
-    const static int FALHA   = -1;
-
-    bool executar();
-    void testarCenario();
-};
-
-class TUEndereco {
-private:
-
-    // Definições de constantes para evitar números mágicos.
-
-    const static int VALOR_VALIDO   = ;
-    const static int VALOR_INVALIDO = ;
-
-    // Referência para o objeto a ser testado.
-    Numero *numero;
-
-
-    // Estado do teste.
-
-    int estado;
-
-    // Declarações de métodos.
-
-   // void setUp();
-    void tearDown();
-    void testarCenarioSucesso();
-    void testarCenarioFalha();
-
-public:
-
-    // Definições de constantes para reportar resultado do teste.
-    void setUp();
-    const static int SUCESSO =  0;
-    const static int FALHA   = -1;
-
-    bool executar();
-    void testarCenario();
-};
-
-class TUData {
-private:
-
-    // Definições de constantes para evitar números mágicos.
-
-    const static int VALOR_VALIDO   = ;
-    const static int VALOR_INVALIDO = ;
-
-    // Referência para o objeto a ser testado.
-    Numero *numero;
-
-
-    // Estado do teste.
-
-    int estado;
-
-    // Declarações de métodos.
-
-   // void setUp();
-    void tearDown();
-    void testarCenarioSucesso();
-    void testarCenarioFalha();
-
-public:
-
-    // Definições de constantes para reportar resultado do teste.
-    void setUp();
-    const static int SUCESSO =  0;
-    const static int FALHA   = -1;
-
-    bool executar();
-    void testarCenario();
-};
-
-class TUMoeda {
-private:
-
-    // Definições de constantes para evitar números mágicos.
-
-    const static int VALOR_VALIDO   = ;
-    const static int VALOR_INVALIDO = ;
-
-    // Referência para o objeto a ser testado.
-    Numero *numero;
-
-
-    // Estado do teste.
-
-    int estado;
-
-    // Declarações de métodos.
-
-   // void setUp();
-    void tearDown();
-    void testarCenarioSucesso();
-    void testarCenarioFalha();
-
-public:
-
-    // Definições de constantes para reportar resultado do teste.
-    void setUp();
-    const static int SUCESSO =  0;
-    const static int FALHA   = -1;
-
-    bool executar();
-    void testarCenario();
-};
-
-class TUNome {
-private:
-
-    // Definições de constantes para evitar números mágicos.
-
-    const static int VALOR_VALIDO   = ;
-    const static int VALOR_INVALIDO = ;
-
-    // Referência para o objeto a ser testado.
-    Numero *numero;
-
-
-    // Estado do teste.
-
-    int estado;
-
-    // Declarações de métodos.
-
-   // void setUp();
-    void tearDown();
-    void testarCenarioSucesso();
-    void testarCenarioFalha();
-
-public:
-
-    // Definições de constantes para reportar resultado do teste.
-    void setUp();
-    const static int SUCESSO =  0;
-    const static int FALHA   = -1;
-
-    bool executar();
-    void testarCenario();
-};
-
-class TUEmail {
-private:
-
-    // Definições de constantes para evitar números mágicos.
-
-    const static int VALOR_VALIDO   = ;
-    const static int VALOR_INVALIDO = ;
-
-    // Referência para o objeto a ser testado.
-    Numero *numero;
-
-
-    // Estado do teste.
-
-    int estado;
-
-    // Declarações de métodos.
-
-   // void setUp();
-    void tearDown();
-    void testarCenarioSucesso();
-    void testarCenarioFalha();
-
-public:
-
-    // Definições de constantes para reportar resultado do teste.
-    void setUp();
-    const static int SUCESSO =  0;
-    const static int FALHA   = -1;
-
-    bool executar();
-    void testarCenario();
-};
-
-class TUSenha {
-private:
-
-    // Definições de constantes para evitar números mágicos.
-
-    const static int VALOR_VALIDO   = ;
-    const static int VALOR_INVALIDO = ;
-
-    // Referência para o objeto a ser testado.
-    Numero *numero;
-
-
-    // Estado do teste.
-
-    int estado;
-
-    // Declarações de métodos.
-
-   // void setUp();
-    void tearDown();
-    void testarCenarioSucesso();
-    void testarCenarioFalha();
-
-public:
-
-    // Definições de constantes para reportar resultado do teste.
-    void setUp();
-    const static int SUCESSO =  0;
-    const static int FALHA   = -1;
-
-    bool executar();
-    void testarCenario();
-};
-
-class TUTelefone {
-private:
-
-    // Definições de constantes para evitar números mágicos.
-
-    const static int VALOR_VALIDO   = ;
-    const static int VALOR_INVALIDO = ;
-
-    // Referência para o objeto a ser testado.
-    Numero *numero;
-
-
-    // Estado do teste.
-
-    int estado;
-
-    // Declarações de métodos.
-
-   // void setUp();
-    void tearDown();
-    void testarCenarioSucesso();
-    void testarCenarioFalha();
-
-public:
-
-    // Definições de constantes para reportar resultado do teste.
-    void setUp();
-    const static int SUCESSO =  0;
-    const static int FALHA   = -1;
-
-    bool executar();
-    void testarCenario();
-};
-*/
 #endif
