@@ -1,18 +1,21 @@
-/*Esta funcao verifica se a string fornecida atende o
-formato especificado nos requisitos*/
 #include <iostream>
 
 using namespace std;
 
 bool validarTelefone(string numero){
     bool accept = true;
-    int zeros = 0,i = 0;
+    int zeros = 0,i = 0,preFixo = 0;
 
     //caso o numero de caracteres excedam o requisito
     if(numero.length() != 15){
         return false;
     }
-
+    
+    //retorna false caso o prefixo nao esteja no formato corrreto
+    if(numero[0] != '(' || numero[4] != ')' || numero[5] != '-'){
+        return false;
+    }
+    
     while(numero[i] != '\0'){
         //regista a ocorrencia de zeros
         if(numero[i] == 48){
@@ -45,13 +48,13 @@ bool validarTelefone(string numero){
 /*A funcao main eh apenas para testes da funcao
 nao devendo por tanto integrar codigo do trabalho*/
 int main(){
-    string contato = "(061)-923456786";
-
+    string contato = "(061924)-567865";
+    
     if(validarTelefone(contato)){
         cout << "O numero eh valido" << endl;
     }else{
         cout << "ERRO: NUMERO INVALIDO" << endl;
     }
-
+    
 return 0;
 }
