@@ -7,7 +7,12 @@
 #include <stdexcept>
 
 using namespace std;
-
+/// Classe de domínio Numero representa a quantidade de hóspedes.
+/// Número dispõe dos seguintes métodos:
+///     Métodos construtores sem e com passagem de parâmetro;
+///     Método "setValor" com passagem de parâmetro que define valor;
+///     Método "getValor" sem passagem de parâmetro que obtém valor;
+///     Método "validar" com passagem de parâmetro que retorna se o valor passado é válido ou não.
 class Numero {
     private:
         static const int DEFAULT = 0;
@@ -46,6 +51,31 @@ class Email {
 
 // metodo onde retona o valor obitido
 inline string Email::getValor(){
+    return valor;
+};
+
+class Codigo {
+    private:
+
+        //variavel padrao caso n receba nada
+        const string DEFAULT = "XXXXX";
+        //definindo a variavel que sera usada para atribuiçao de valor
+        string valor;
+    public:
+        //primeiro metodo construtor no caso de nao aver nada 'Email()'
+        Codigo();
+        //segundo caso aja passagem de parametros
+        Codigo(string);
+        // metodo onde leva os valores(define)
+        void setValor(string);
+        // metodo onde pega os valores(obiter)
+        string getValor();
+        // retorna verdadeiro ou falso
+        bool validar (string);
+};
+
+// metodo onde retona o valor obitido
+inline string Codigo::getValor(){
     return valor;
 };
 
