@@ -91,32 +91,29 @@ void Codigo::setValor(string valor){
 bool Codigo::validar(string valor){
 
    //validacao de parametros de codigo
-   string nome_codigo = "00000", variavel_letra = "a";
    int i = 0;
    //laco para percorer o nome
-   if(nome_codigo[0] == 48 && nome_codigo[1] == 48 && nome_codigo[2] == 48 && nome_codigo[3]== 48 && nome_codigo[4]== 48){
-       return false;
+   if(valor[0] == 48 && valor[1] == 48 && valor[2] == 48 && valor[3]== 48 && valor[4]== 48){
+        return false;
    }
-   while(nome_codigo[i] != '\0'){
+   while(valor[i] != '\0'){
         //conferindo se na posicao do iesimo eh letra maiuscula
-       if (nome_codigo[i] >= 65 && nome_codigo[i] <= 90){
+        if (valor[i] >= 65 && valor[i] <= 90){
             i++;
             continue;
         }
         //conferindo se na posicao do iesimo eh algum numero
-        if (nome_codigo[i] >= 48 && nome_codigo[i] <= 57){
+        if (valor[i] >= 48 && valor[i] <= 57){
             i++;
             continue;
         }
-        if (nome_codigo[i] < 65 && nome_codigo[i] > 90 && nome_codigo[i] < 48 && nome_codigo[i] > 57){
+        if (valor[i] < 65 || valor[i] > 90 || valor[i] < 48 || valor[i] > 57){
             i++;
-            cout << "x MINUSCULO NAO EH VALIDO" << endl;
             return false;
         }
    }
    //pega o valor de i e verifica se ele eh menor que 1 e maior que 5
     if(i != 5){
-        //cout << "IF FORA DO WHILE" << endl;
         return false;
     }
     return true;

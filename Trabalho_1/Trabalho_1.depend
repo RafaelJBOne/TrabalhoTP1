@@ -20,33 +20,18 @@
 1615898193 source:c:\users\intel\desktop\trabalho_1\n_dominios.cpp
 	"n_dominios.h"
 
-1615901554 c:\users\intel\desktop\trabalho_1\n_dominios.h
+1615910491 c:\users\intel\desktop\trabalho_1\n_dominios.h
 	<iostream>
 	<stdexcept>
 
-1615898193 source:c:\users\intel\desktop\trabalho_1\n_main.cpp
+1615910491 source:c:\users\intel\desktop\trabalho_1\n_main.cpp
 	<iostream>
 	"n_dominios.h"
 	"n_testes.h"
 
-1615898193 c:\users\intel\desktop\trabalho_1\n_testes.h
+1615910491 c:\users\intel\desktop\trabalho_1\n_testes.h
 	"n_dominios.h"
 
-1615898193 source:c:\users\intel\desktop\trabalho_1\n_testes.cpp
-	"n_testes.h"
-
-1615909122 source:c:\users\rafae\desktop\trabalho_1\n_main.cpp
-	<iostream>
-	"n_dominios.h"
-	"n_testes.h"
-
-1615907009 c:\users\rafae\desktop\trabalho_1\n_dominios.h
-	<iostream>
-	<stdexcept>
-
-1615909815 c:\users\rafae\desktop\trabalho_1\n_testes.h
-	"n_dominios.h"
-
-1615908870 source:c:\users\rafae\desktop\trabalho_1\n_testes.cpp
+1615910491 source:c:\users\intel\desktop\trabalho_1\n_testes.cpp
 	"n_testes.h"
 
