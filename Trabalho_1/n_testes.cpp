@@ -2,6 +2,130 @@
 /*TESTES.CPP: METODOS DAS CLASSES*/
 #include "n_testes.h"
 
+void TUCodigo::setUp(){
+    codigo = new Codigo();
+    estado = SUCESSO;
+}
+
+void TUCodigo::tearDown(){
+    delete codigo;
+}
+
+void TUCodigo::testarCenarioSucesso(){
+    try{
+        codigo->setValor(VALOR_VALIDO);
+        if (codigo->getValor() != VALOR_VALIDO){
+            estado = FALHA;
+        }
+    }
+    catch(invalid_argument &excecao){
+        estado = FALHA;
+    }
+}
+
+void TUCodigo::testarCenarioFalha(){
+    try{
+        codigo->setValor(VALOR_INVALIDO);
+        estado = FALHA;
+    }
+    catch(invalid_argument &excecao){
+        if (codigo->getValor() == VALOR_INVALIDO){
+            estado = FALHA;
+        }
+    }
+}
+
+int TUCodigo::executar(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
+
+void TUClasse::setUp(){
+    classe = new Classe();
+    estado = SUCESSO;
+}
+
+void TUClasse::tearDown(){
+    delete classe;
+}
+
+void TUClasse::testarCenarioSucesso(){
+    try{
+        classe->setValor(VALOR_VALIDO);
+        if (classe->getValor() != VALOR_VALIDO){
+            estado = FALHA;
+        }
+    }
+    catch(invalid_argument &excecao){
+        estado = FALHA;
+    }
+}
+
+void TUClasse::testarCenarioFalha(){
+    try{
+        classe->setValor(VALOR_INVALIDO);
+        estado = FALHA;
+    }
+    catch(invalid_argument &excecao){
+        if (classe->getValor() == VALOR_INVALIDO){
+            estado = FALHA;
+        }
+    }
+}
+
+int TUClasse::executar(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
+void TUEndereco::setUp(){
+    endereco = new Endereco();
+    estado = SUCESSO;
+}
+
+void TUEndereco::tearDown(){
+    delete endereco;
+}
+
+void TUEndereco::testarCenarioSucesso(){
+    try{
+        endereco->setValor(VALOR_VALIDO);
+        if (endereco->getValor() != VALOR_VALIDO){
+            estado = FALHA;
+        }
+    }
+    catch(invalid_argument &excecao){
+        estado = FALHA;
+    }
+}
+
+void TUEndereco::testarCenarioFalha(){
+    try{
+        endereco->setValor(VALOR_INVALIDO);
+        estado = FALHA;
+    }
+    catch(invalid_argument &excecao){
+        if (endereco->getValor() == VALOR_INVALIDO){
+            estado = FALHA;
+        }
+    }
+}
+
+int TUEndereco::executar(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
 void TUNumero::setUp(){
     numero = new Numero();
     estado = SUCESSO;
@@ -84,19 +208,19 @@ int TUEmail::executar(){
     return estado;
 }
 
-void TUCodigo::setUp(){
-    codigo = new Codigo();
+void TUNome::setUp(){
+    nome = new Nome();
     estado = SUCESSO;
 }
 
-void TUCodigo::tearDown(){
-    delete codigo;
+void TUNome::tearDown(){
+    delete nome;
 }
 
-void TUCodigo::testarCenarioSucesso(){
+void TUNome::testarCenarioSucesso(){
     try{
-        codigo->setValor(VALOR_VALIDO);
-        if (codigo->getValor() != VALOR_VALIDO){
+        nome->setValor(VALOR_VALIDO);
+        if (nome->getValor() != VALOR_VALIDO){
             estado = FALHA;
         }
     }
@@ -105,22 +229,231 @@ void TUCodigo::testarCenarioSucesso(){
     }
 }
 
-void TUCodigo::testarCenarioFalha(){
+void TUNome::testarCenarioFalha(){
     try{
-        codigo->setValor(VALOR_INVALIDO);
+        nome->setValor(VALOR_INVALIDO);
         estado = FALHA;
     }
     catch(invalid_argument &excecao){
-        if (codigo->getValor() == VALOR_INVALIDO){
+        if (nome->getValor() == VALOR_INVALIDO){
             estado = FALHA;
         }
     }
 }
 
-int TUCodigo::executar(){
+int TUNome::executar(){
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
     tearDown();
     return estado;
 }
+
+void TUMoeda::setUp(){
+    moeda = new Moeda();
+    estado = SUCESSO;
+}
+
+void TUMoeda::tearDown(){
+    delete moeda;
+}
+
+void TUMoeda::testarCenarioSucesso(){
+    try{
+        moeda->setValor(VALOR_VALIDO);
+        if (moeda->getValor() != VALOR_VALIDO){
+            estado = FALHA;
+        }
+    }
+    catch(invalid_argument &excecao){
+        estado = FALHA;
+    }
+}
+
+void TUMoeda::testarCenarioFalha(){
+    try{
+        moeda->setValor(VALOR_INVALIDO);
+        estado = FALHA;
+    }
+    catch(invalid_argument &excecao){
+        if (moeda->getValor() == VALOR_INVALIDO){
+            estado = FALHA;
+        }
+    }
+}
+
+int TUMoeda::executar(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
+void TUTelefone::setUp(){
+    telefone = new Telefone();
+    estado = SUCESSO;
+}
+
+void TUTelefone::tearDown(){
+    delete telefone;
+}
+
+void TUTelefone::testarCenarioSucesso(){
+    try{
+        telefone->setValor(VALOR_VALIDO);
+        if (telefone->getValor() != VALOR_VALIDO){
+            estado = FALHA;
+        }
+    }
+    catch(invalid_argument &excecao){
+        estado = FALHA;
+    }
+}
+
+void TUTelefone::testarCenarioFalha(){
+    try{
+        telefone->setValor(VALOR_INVALIDO);
+        estado = FALHA;
+    }
+    catch(invalid_argument &excecao){
+        if (telefone->getValor() == VALOR_INVALIDO){
+            estado = FALHA;
+        }
+    }
+}
+
+int TUTelefone::executar(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
+
+void TUDescricao::setUp(){
+    descricao = new Descricao();
+    estado = SUCESSO;
+}
+
+void TUDescricao::tearDown(){
+    delete descricao;
+}
+
+void TUDescricao::testarCenarioSucesso(){
+    try{
+        descricao->setValor(VALOR_VALIDO);
+        if (descricao->getValor() != VALOR_VALIDO){
+            estado = FALHA;
+        }
+    }
+    catch(invalid_argument &excecao){
+        estado = FALHA;
+    }
+}
+
+void TUDescricao::testarCenarioFalha(){
+    try{
+        descricao->setValor(VALOR_INVALIDO);
+        estado = FALHA;
+    }
+    catch(invalid_argument &excecao){
+        if (descricao->getValor() == VALOR_INVALIDO){
+            estado = FALHA;
+        }
+    }
+}
+
+int TUDescricao::executar(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
+void TUData::setUp(){
+    data = new Data();
+    estado = SUCESSO;
+}
+
+void TUData::tearDown(){
+    delete data;
+}
+
+void TUData::testarCenarioSucesso(){
+    try{
+        data->setValor(VALOR_VALIDO);
+        if (data->getValor() != VALOR_VALIDO){
+            estado = FALHA;
+        }
+    }
+    catch(invalid_argument &excecao){
+        estado = FALHA;
+    }
+}
+
+void TUData::testarCenarioFalha(){
+    try{
+        data->setValor(VALOR_INVALIDO);
+        estado = FALHA;
+    }
+    catch(invalid_argument &excecao){
+        if (data->getValor() == VALOR_INVALIDO){
+            estado = FALHA;
+        }
+    }
+}
+
+int TUData::executar(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
+
+void TUSenha::setUp(){
+    senha = new Senha();
+    estado = SUCESSO;
+}
+
+void TUSenha::tearDown(){
+    delete senha;
+}
+
+void TUSenha::testarCenarioSucesso(){
+    try{
+        senha->setValor(VALOR_VALIDO);
+        if (senha->getValor() != VALOR_VALIDO){
+            estado = FALHA;
+        }
+    }
+    catch(invalid_argument &excecao){
+        estado = FALHA;
+    }
+}
+
+void TUSenha::testarCenarioFalha(){
+    try{
+        senha->setValor(VALOR_INVALIDO);
+        estado = FALHA;
+    }
+    catch(invalid_argument &excecao){
+        if (senha->getValor() == VALOR_INVALIDO){
+            estado = FALHA;
+        }
+    }
+}
+
+int TUSenha::executar(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
+

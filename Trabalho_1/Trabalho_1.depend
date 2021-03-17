@@ -17,21 +17,21 @@
 1615869443 source:c:\users\kelson\desktop\trabalho_1\n_testes.cpp
 	"n_testes.h"
 
-1615898193 source:c:\users\intel\desktop\trabalho_1\n_dominios.cpp
+1615951748 source:c:\users\intel\desktop\trabalho_1\n_dominios.cpp
 	"n_dominios.h"
 
-1615910491 c:\users\intel\desktop\trabalho_1\n_dominios.h
+1615951939 c:\users\intel\desktop\trabalho_1\n_dominios.h
 	<iostream>
 	<stdexcept>
 
-1615910491 source:c:\users\intel\desktop\trabalho_1\n_main.cpp
+1615950308 source:c:\users\intel\desktop\trabalho_1\n_main.cpp
 	<iostream>
 	"n_dominios.h"
 	"n_testes.h"
 
-1615910491 c:\users\intel\desktop\trabalho_1\n_testes.h
+1615951161 c:\users\intel\desktop\trabalho_1\n_testes.h
 	"n_dominios.h"
 
-1615910491 source:c:\users\intel\desktop\trabalho_1\n_testes.cpp
+1615950416 source:c:\users\intel\desktop\trabalho_1\n_testes.cpp
 	"n_testes.h"
 

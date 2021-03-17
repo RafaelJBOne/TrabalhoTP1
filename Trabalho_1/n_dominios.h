@@ -7,6 +7,56 @@
 #include <stdexcept>
 
 using namespace std;
+
+class Codigo {
+    private:
+
+        //variavel padrao caso n receba nada
+        const string DEFAULT = "XXXXX";
+        //definindo a variavel que sera usada para atribuiçao de valor
+        string valor;
+    public:
+        //primeiro metodo construtor no caso de nao aver nada 'Email()'
+        Codigo();
+        //segundo caso aja passagem de parametros
+        Codigo(string);
+        // metodo onde leva os valores(define)
+        void setValor(string);
+        // metodo onde pega os valores(obiter)
+        string getValor();
+        // retorna verdadeiro ou falso
+        bool validar (string);
+};
+
+// metodo onde retona o valor obitido
+inline string Codigo::getValor(){
+    return valor;
+};
+
+class Classe {
+    private:
+
+        //variavel padrao caso n receba nada
+        const int DEFAULT = 1;
+        //definindo a variavel que sera usada para atribuiçao de valor
+        int valor;
+    public:
+        //primeiro metodo construtor no caso de nao aver nada 'Email()'
+        Classe();
+        //segundo caso aja passagem de parametros
+        Classe(int);
+        // metodo onde leva os valores(define)
+        void setValor(int);
+        // metodo onde pega os valores(obiter)
+        int getValor();
+        // retorna verdadeiro ou falso
+        bool validar (int);
+};
+
+// metodo onde retona o valor obitido
+inline int Classe::getValor(){
+    return valor;
+};
 /// Classe de domínio Numero representa a quantidade de hóspedes.
 /// Número dispõe dos seguintes métodos:
 ///     Métodos construtores sem e com passagem de parâmetro;
@@ -54,18 +104,18 @@ inline string Email::getValor(){
     return valor;
 };
 
-class Codigo {
+class Nome {
     private:
 
         //variavel padrao caso n receba nada
-        const string DEFAULT = "XXXXX";
+        const string DEFAULT = "Johnatan. Sousa";
         //definindo a variavel que sera usada para atribuiçao de valor
         string valor;
     public:
         //primeiro metodo construtor no caso de nao aver nada 'Email()'
-        Codigo();
+        Nome();
         //segundo caso aja passagem de parametros
-        Codigo(string);
+        Nome(string);
         // metodo onde leva os valores(define)
         void setValor(string);
         // metodo onde pega os valores(obiter)
@@ -75,210 +125,150 @@ class Codigo {
 };
 
 // metodo onde retona o valor obitido
-inline string Codigo::getValor(){
-    return valor;
-};
-
-/*
-class Codigo {
-    private:
-        static const int DEFAULT = 0;
-        int valor;
-    public:
-        Codigo();
-        Codigo(int);
-        void setValor(int);
-        int getValor();
-        bool validar (int);
-};
-
-inline void Codigo::setValor(int valor){
-    this->valor = valor;
-};
-
-inline int Codigo::getValor(){
-    return valor;
-};
-
-class Classe {
-    private:
-        static const int DEFAULT = 0;
-        int valor;
-    public:
-        Classe();
-        Classe(int);
-        void setValor(int);
-        int getValor();
-        bool validar (int);
-};
-
-inline void Classe::setValor(int valor){
-    this->valor = valor;
-};
-
-inline int Classe::getValor(){
-    return valor;
-};
-
-class Descricao {
-    private:
-        static const int DEFAULT = 0;
-        int valor;
-    public:
-        Descricao();
-        Descricao(int);
-        void setValor(int);
-        int getValor();
-        bool validar (int);
-};
-
-inline void Descricao::setValor(int valor){
-    this->valor = valor;
-};
-
-inline int Descricao::getValor(){
+inline string Nome::getValor(){
     return valor;
 };
 
 class Endereco {
     private:
-        static const int DEFAULT = 0;
-        int valor;
+
+        //variavel padrao caso n receba nada
+        const string DEFAULT = "Conj 08 lote 14.5";
+        //definindo a variavel que sera usada para atribuiçao de valor
+        string valor;
     public:
+        //primeiro metodo construtor no caso de nao aver nada 'Email()'
         Endereco();
-        Endereco(int);
-        void setValor(int);
-        int getValor();
-        bool validar (int);
+        //segundo caso aja passagem de parametros
+        Endereco(string);
+        // metodo onde leva os valores(define)
+        void setValor(string);
+        // metodo onde pega os valores(obiter)
+        string getValor();
+        // retorna verdadeiro ou falso
+        bool validar (string);
 };
 
-inline void Endereco::setValor(int valor){
-    this->valor = valor;
-};
-
-inline int Endereco::getValor(){
-    return valor;
-};
-
-class Data {
-    private:
-        static const int DEFAULT = 0;
-        int valor;
-    public:
-        Data();
-        Data(int);
-        void setValor(int);
-        int getValor();
-        bool validar (int);
-};
-
-inline void Data::setValor(int valor){
-    this->valor = valor;
-};
-
-inline int Data::getValor(){
+// metodo onde retona o valor obitido
+inline string Endereco::getValor(){
     return valor;
 };
 
 class Moeda {
     private:
-        static const int DEFAULT = 0;
-        int valor;
+        double DEFAULT = 10;
+        double valor;
     public:
         Moeda();
-        Moeda(int);
-        void setValor(int);
-        int getValor();
-        bool validar (int);
+        Moeda(double);
+        void setValor(double);
+        double getValor();
+        bool validar (double);
 };
 
-inline void Moeda::setValor(int valor){
-    this->valor = valor;
-};
-
-inline int Moeda::getValor(){
+inline double Moeda::getValor(){
     return valor;
-};
-
-class Nome {
-    private:
-        static const int DEFAULT = 0;
-        int valor;
-    public:
-        Nome();
-        Nome(int);
-        void setValor(int);
-        int getValor();
-        bool validar (int);
-};
-
-inline void Nome::setValor(int valor){
-    this->valor = valor;
-};
-
-inline int Nome::getValor(){
-    return valor;
-};
-
-class Email {
-    private:
-        static const int DEFAULT = 0;
-        int valor;
-    public:
-        Email();
-        Email(int);
-        void setValor(int);
-        int getValor();
-        bool validar (int);
-};
-
-inline void Email::setValor(int valor){
-    this->valor = valor;
-};
-
-inline int Email::getValor(){
-    return valor;
-};
-
-class Senha {
-    private:
-        static const int DEFAULT = 0;
-        int valor;
-    public:
-        Senha();
-        Senha(int);
-        void setValor(int);
-        int getValor();
-        bool validar (int);
-};
-
-inline void Senha::setValor(int valor){
-    this->valor = valor;
-};
-
-inline int Senha::getValor(){
-    return valor;
-};
+}
 
 class Telefone {
     private:
-        static const int DEFAULT = 0;
-        int valor;
+
+        //variavel padrao caso n receba nada
+        const string DEFAULT = "(123)-123456789";
+        //definindo a variavel que sera usada para atribuiçao de valor
+        string valor;
     public:
+        //primeiro metodo construtor no caso de nao aver nada 'Email()'
         Telefone();
-        Telefone(int);
-        void setValor(int);
-        int getValor();
-        bool validar (int);
+        //segundo caso aja passagem de parametros
+        Telefone(string);
+        // metodo onde leva os valores(define)
+        void setValor(string);
+        // metodo onde pega os valores(obiter)
+        string getValor();
+        // retorna verdadeiro ou falso
+        bool validar (string);
 };
 
-inline void Telefone::setValor(int valor){
-    this->valor = valor;
-};
-
-inline int Telefone::getValor(){
+// metodo onde retona o valor obitido
+inline string Telefone::getValor(){
     return valor;
 };
 
-*/
+class Descricao {
+    private:
+
+        //variavel padrao caso n receba nada
+        const string DEFAULT = "123456";
+        //definindo a variavel que sera usada para atribuiçao de valor
+        string valor;
+    public:
+        //primeiro metodo construtor no caso de nao aver nada 'Email()'
+        Descricao();
+        //segundo caso aja passagem de parametros
+        Descricao(string);
+        // metodo onde leva os valores(define)
+        void setValor(string);
+        // metodo onde pega os valores(obiter)
+        string getValor();
+        // retorna verdadeiro ou falso
+        bool validar (string);
+};
+
+// metodo onde retona o valor obitido
+inline string Descricao::getValor(){
+    return valor;
+};
+
+class Data {
+    private:
+
+        //variavel padrao caso n receba nada
+        const string DEFAULT = "DD-MM-AA";
+        //definindo a variavel que sera usada para atribuiçao de valor
+        string valor;
+    public:
+        //primeiro metodo construtor no caso de nao aver nada 'Email()'
+        Data();
+        //segundo caso aja passagem de parametros
+        Data(string);
+        // metodo onde leva os valores(define)
+        void setValor(string);
+        // metodo onde pega os valores(obiter)
+        string getValor();
+        // retorna verdadeiro ou falso
+        bool validar (string);
+};
+
+// metodo onde retona o valor obitido
+inline string Data::getValor(){
+    return valor;
+};
+
+
+class Senha {
+    private:
+
+        //variavel padrao caso n receba nada
+        const string DEFAULT = "XXXXXX";
+        //definindo a variavel que sera usada para atribuiçao de valor
+        string valor;
+    public:
+        //primeiro metodo construtor no caso de nao aver nada 'Email()'
+        Senha();
+        //segundo caso aja passagem de parametros
+        Senha(string);
+        // metodo onde leva os valores(define)
+        void setValor(string);
+        // metodo onde pega os valores(obiter)
+        string getValor();
+        // retorna verdadeiro ou falso
+        bool validar (string);
+};
+
+// metodo onde retona o valor obitido
+inline string Senha::getValor(){
+    return valor;
+};
+
 #endif // DOMINIOS_H_INCLUDED
