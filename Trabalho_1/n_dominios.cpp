@@ -48,7 +48,6 @@ bool Codigo::validar(string valor){
     return true;
 }
 
-
 Classe::Classe(){
     valor = DEFAULT;
 }
@@ -97,6 +96,178 @@ bool Classe::validar(int valor){
     return true;
 }
 
+Descricao::Descricao(){
+    valor = DEFAULT;
+}
+
+Descricao::Descricao(string valor){
+    this->valor = valor;
+}
+
+void Descricao::setValor(string valor){
+    if (validar(valor)){
+        this->valor = valor;
+    }else{
+        throw invalid_argument("Argumento invalido.");
+    }
+}
+
+bool Descricao::validar(string valor){
+    /*Formato: 5 a 30 caracteres. Terminado por ponto.*/
+    int contador = 0;
+    // Enquanto existir caractere e o contador for menor do que 30.
+    while (valor[contador] != '\0' && contador <= 30){
+        contador ++;
+    }
+    // Se existir menos de 5 ou mais de 30 caracteres ou o último caractere não for um ponto.
+    if (contador < 5 or contador > 30 or valor[contador - 1] != '.'){
+        return false;
+    }
+    return true;
+}
+
+Endereco::Endereco(){
+    valor = DEFAULT;
+}
+
+Endereco::Endereco(string valor){
+    this->valor = valor;
+}
+
+void Endereco::setValor(string valor){
+    if (validar(valor)){
+        this->valor = valor;
+    }else{
+        throw invalid_argument("Argumento invalido.");
+    }
+}
+
+bool Endereco::validar(string valor){
+    int tamanho = valor.length();
+    //restricao do requisito (quantidade de caracterres)
+    if(tamanho >= 5 && tamanho <= 20){
+        int i = 0;
+    // verificacao de caracteres
+        while(valor[i] != '\0'){
+        /* caso todos os carcteres da string sejam validos a variavel accept nao
+        recebera false devido os comandos continue dentro de cada condicional*/
+            if (valor[i] >= 65 && valor[i] <= 90){
+                i++;
+                continue;
+            }
+            if (valor[i] >= 97 && valor[i] <= 122){
+                i++;
+                continue;
+            }
+            if (valor[i] >= 48 && valor[i] <= 57){
+                i++;
+                continue;
+            }
+            if (valor[i] == 46){
+                i++;
+                continue;
+            }
+            if (valor[i] == 32){
+                i++;
+                continue;
+            }
+            return false;
+        }
+    }else{
+        return false;
+    }
+
+    return true;
+}
+
+Data::Data(){
+    valor = DEFAULT;
+}
+
+Data::Data(string valor){
+    this->valor = valor;
+}
+
+void Data::setValor(string valor){
+    if (validar(valor)){
+        this->valor = valor;
+    }else{
+        throw invalid_argument("Argumento invalido.");
+    }
+}
+
+bool Data::validar(string valor){
+    int valor_do_primeiro_caractere = 0;
+    int valor_do_segundo_caractere = 0;
+    // DIA
+    valor_do_primeiro_caractere = valor[0];
+    // Se o valor do primeiro caractere do dia não está entre os valores que representam de "0" a "3", na tabela ascii.
+    if (valor_do_primeiro_caractere < 48 or valor_do_primeiro_caractere > 51){
+        return false;
+    }
+
+    valor_do_segundo_caractere = valor[1];
+    // Se o valor do primeiro caractere do dia é valor que representa "0", na tabela ascii.
+    if (valor_do_primeiro_caractere == 48){
+        // Se o valor do segundo caractere do dia é valor que representa "0", na tabela ascii.
+        if (valor_do_segundo_caractere == 48){
+            return false;
+        }
+    }
+    // Se o valor do primeiro caractere do dia é valor que representa "3", na tabela ascii.
+    if (valor_do_primeiro_caractere == 51){
+        // Se o valor do segundo caractere do dia não é valor que representa "0" ou "1", na tabela ascii.
+        if (valor_do_segundo_caractere != 48 && valor_do_segundo_caractere != 49){
+            return false;
+        }
+    }
+    // Se o valor do segundo caractere do dia não está entre os valores que representam de "0" a "9", na tabela ascii.
+    if (valor_do_segundo_caractere < 48 or valor_do_segundo_caractere > 57){
+        return false;
+    }
+    // MÊS
+    valor_do_primeiro_caractere = valor[3];
+    // Se o valor do primeiro caractere do mês é diferente dos valores que representam "0" e "1", na tabela ascii.
+    if (valor_do_primeiro_caractere != 48 && valor_do_primeiro_caractere != 49){
+        return false;
+    }
+
+    valor_do_segundo_caractere = valor[4];
+    // Se o valor do primeiro caractere do mês é valor que representa "0", na tabela ascii.
+    if (valor_do_primeiro_caractere == 48){
+        // Se o valor do segundo caractere do mês não está entre os valores que representam de "1" a "9", na tabela ascii.
+        if (valor_do_segundo_caractere < 49 or valor_do_segundo_caractere > 57){
+            return false;
+        }
+    }
+    // Se o valor do primeiro caractere do mês é valor que representa "1", na tabela ascii.
+    if (valor_do_primeiro_caractere == 49){
+        // Se o valor do segundo caractere do mês não está entre os valores que representam de "0" a "2", na tabela ascii.
+        if (valor_do_segundo_caractere < 48 or valor_do_segundo_caractere > 50){
+            return false;
+        }
+    }
+    // ANO
+    valor_do_primeiro_caractere = valor[6];
+    // Se o valor do primeiro caractere do ano não está entre os valores que representam de "2" a "9", na tabela ascii.
+    if (valor_do_primeiro_caractere < 50 or valor_do_primeiro_caractere > 57){
+        return false;
+    }
+    valor_do_segundo_caractere = valor[7];
+    // Se o valor do primeiro caractere do ano é valor que representa "2", na tabela ascii.
+    if (valor_do_primeiro_caractere == 50){
+        // Se o valor do segundo caractere do ano não está entre os valores que representam de "1" a "9", na tabela ascii.
+        if (valor_do_segundo_caractere < 49 or valor_do_segundo_caractere > 57){
+            return false;
+        }
+    }
+    // Se o valor do segundo caractere do ano não está entre os valores que representam de "0" a "9", na tabela ascii ou existe um terceiro número em "ano".
+    if (valor_do_segundo_caractere < 48 or valor_do_segundo_caractere > 57 or valor[8] != '\0'){
+        return false;
+    }
+    return true;
+}
+
 Numero::Numero(){
     valor = DEFAULT;
 }
@@ -120,52 +291,30 @@ bool Numero::validar(int valor){
     return true;
 }
 
-Email::Email(){
+Moeda::Moeda(){
     valor = DEFAULT;
 }
 
-Email::Email(string valor){
+Moeda::Moeda(double valor){
     this->valor = valor;
 }
 
-void Email::setValor(string valor){
+void Moeda::setValor(double valor){
     if (validar(valor)){
         this->valor = valor;
     }else{
         throw invalid_argument("Argumento invalido.");
     }
-};
+}
 
-bool Email::validar(string valor){
-    //pegando o email para validacao
-    string caractere = "a";
-    int posicao = 0;
-    int valor_do_caractere;
-    int proximo_valor_do_caractere;
-    int contador_1 = 0;
-    // '\0' = EOF
-    // ler tudo ate o @
-    while(caractere != "@"){
-        caractere = valor[posicao];
-        posicao++;
-        contador_1 ++;
+bool Moeda::validar(double valor){
+
+    if(valor >= 0 && valor <= 1000000){
+        return true;
+    }else{
+        return false;
     }
-    //caso o nome ultrapasse 10 caracteres
-    if(contador_1 > 10){
-        return  false;
-    }
-    //contador para depois do @
-    int contador_2 = 0;
-    // '\0' = EOF
-    //enquanto houver caractere depois do @
-    while(valor[posicao] != '\0'){
-        contador_2++;
-        posicao++;
-    }
-    //caso o dominio ultrapasse 20 caracteres
-    if(contador_2 > 20){
-        return  false;
-    }
+    return true;
 }
 
 Nome::Nome(){
@@ -264,251 +413,52 @@ bool Nome::validar(string valor){
     return true;
 }
 
-
-Endereco::Endereco(){
+Email::Email(){
     valor = DEFAULT;
 }
 
-Endereco::Endereco(string valor){
+Email::Email(string valor){
     this->valor = valor;
 }
 
-void Endereco::setValor(string valor){
+void Email::setValor(string valor){
     if (validar(valor)){
         this->valor = valor;
     }else{
         throw invalid_argument("Argumento invalido.");
     }
-}
+};
 
-bool Endereco::validar(string valor){
-    int tamanho = valor.length();
-    //restricao do requisito (quantidade de caracterres)
-    if(tamanho >= 5 && tamanho <= 20){
-        int i = 0;
-    // verificacao de caracteres
-        while(valor[i] != '\0'){
-        /* caso todos os carcteres da string sejam validos a variavel accept nao
-        recebera false devido os comandos continue dentro de cada condicional*/
-            if (valor[i] >= 65 && valor[i] <= 90){
-                i++;
-                continue;
-            }
-            if (valor[i] >= 97 && valor[i] <= 122){
-                i++;
-                continue;
-            }
-            if (valor[i] >= 48 && valor[i] <= 57){
-                i++;
-                continue;
-            }
-            if (valor[i] == 46){
-                i++;
-                continue;
-            }
-            if (valor[i] == 32){
-                i++;
-                continue;
-            }
-            return false;
-        }
-    }else{
-        return false;
+bool Email::validar(string valor){
+    //pegando o email para validacao
+    string caractere = "a";
+    int posicao = 0;
+    int valor_do_caractere;
+    int proximo_valor_do_caractere;
+    int contador_1 = 0;
+    // '\0' = EOF
+    // ler tudo ate o @
+    while(caractere != "@"){
+        caractere = valor[posicao];
+        posicao++;
+        contador_1 ++;
     }
-
-    return true;
-}
-
-Moeda::Moeda(){
-    valor = DEFAULT;
-}
-
-Moeda::Moeda(double valor){
-    this->valor = valor;
-}
-
-void Moeda::setValor(double valor){
-    if (validar(valor)){
-        this->valor = valor;
-    }else{
-        throw invalid_argument("Argumento invalido.");
+    //caso o nome ultrapasse 10 caracteres
+    if(contador_1 > 10){
+        return  false;
     }
-}
-
-bool Moeda::validar(double valor){
-
-    if(valor >= 0 && valor <= 1000000){
-        return true;
-    }else{
-        return false;
+    //contador para depois do @
+    int contador_2 = 0;
+    // '\0' = EOF
+    //enquanto houver caractere depois do @
+    while(valor[posicao] != '\0'){
+        contador_2++;
+        posicao++;
     }
-    return true;
-}
-
-Telefone::Telefone(){
-    valor = DEFAULT;
-}
-
-Telefone::Telefone(string valor){
-    this->valor = valor;
-}
-
-void Telefone::setValor(string valor){
-    if (validar(valor)){
-        this->valor = valor;
-    }else{
-        throw invalid_argument("Argumento invalido.");
+    //caso o dominio ultrapasse 20 caracteres
+    if(contador_2 > 20){
+        return  false;
     }
-}
-
-bool Telefone::validar(string valor){
-
-    int zeros = 0,i = 0,preFixo = 0;
-    //retorna false caso o prefixo nao esteja no formato corrreto
-    if(valor[0] == '(' && valor[4] == ')' && valor[5] == '-'){
-        while(valor[i] != '\0'){
-            //regista a ocorrencia de zeros
-            if(valor[i] == 48){
-                zeros++;
-            }
-            //caso esta condicional seja ativada significa que o formato "(000)-000000000" foi fornecido
-            if(zeros >= 12){
-                return false;
-            }
-            //verifica a ocorrencia dos digitos de 0 a 9
-            // verifica a ocorrencia dos caracteres "(", ")" e "-"
-            if(valor[i] >= 48 && valor[i] <= 57 || valor[i] == 40 || valor[i] == 41 || valor[i] == 45){
-                i++;
-            }else{
-                return false;
-            }
-        }
-        //caso o numero de caracteres excedam o requisito
-        if(i == 15){
-        }else{
-            return false;
-        }
-        return true;
-    }
-}
-
-Descricao::Descricao(){
-    valor = DEFAULT;
-}
-
-Descricao::Descricao(string valor){
-    this->valor = valor;
-}
-
-void Descricao::setValor(string valor){
-    if (validar(valor)){
-        this->valor = valor;
-    }else{
-        throw invalid_argument("Argumento invalido.");
-    }
-}
-
-bool Descricao::validar(string valor){
-    /*Formato: 5 a 30 caracteres. Terminado por ponto.*/
-    int contador = 0;
-    // Enquanto existir caractere e o contador for menor do que 30.
-    while (valor[contador] != '\0' && contador <= 30){
-        contador ++;
-    }
-    // Se existir menos de 5 ou mais de 30 caracteres ou o último caractere não for um ponto.
-    if (contador < 5 or contador > 30 or valor[contador - 1] != '.'){
-        return false;
-    }
-    return true;
-}
-
-
-Data::Data(){
-    valor = DEFAULT;
-}
-
-Data::Data(string valor){
-    this->valor = valor;
-}
-
-void Data::setValor(string valor){
-    if (validar(valor)){
-        this->valor = valor;
-    }else{
-        throw invalid_argument("Argumento invalido.");
-    }
-}
-
-bool Data::validar(string valor){
-    int valor_do_primeiro_caractere = 0;
-    int valor_do_segundo_caractere = 0;
-    // DIA
-    valor_do_primeiro_caractere = valor[0];
-    // Se o valor do primeiro caractere do dia não está entre os valores que representam de "0" a "3", na tabela ascii.
-    if (valor_do_primeiro_caractere < 48 or valor_do_primeiro_caractere > 51){
-        return false;
-    }
-
-    valor_do_segundo_caractere = valor[1];
-    // Se o valor do primeiro caractere do dia é valor que representa "0", na tabela ascii.
-    if (valor_do_primeiro_caractere == 48){
-        // Se o valor do segundo caractere do dia é valor que representa "0", na tabela ascii.
-        if (valor_do_segundo_caractere == 48){
-            return false;
-        }
-    }
-    // Se o valor do primeiro caractere do dia é valor que representa "3", na tabela ascii.
-    if (valor_do_primeiro_caractere == 51){
-        // Se o valor do segundo caractere do dia não é valor que representa "0" ou "1", na tabela ascii.
-        if (valor_do_segundo_caractere != 48 && valor_do_segundo_caractere != 49){
-            return false;
-        }
-    }
-    // Se o valor do segundo caractere do dia não está entre os valores que representam de "0" a "9", na tabela ascii.
-    if (valor_do_segundo_caractere < 48 or valor_do_segundo_caractere > 57){
-        return false;
-    }
-    // MÊS
-    valor_do_primeiro_caractere = valor[3];
-    // Se o valor do primeiro caractere do mês é diferente dos valores que representam "0" e "1", na tabela ascii.
-    if (valor_do_primeiro_caractere != 48 && valor_do_primeiro_caractere != 49){
-        return false;
-    }
-
-    valor_do_segundo_caractere = valor[4];
-    // Se o valor do primeiro caractere do mês é valor que representa "0", na tabela ascii.
-    if (valor_do_primeiro_caractere == 48){
-        // Se o valor do segundo caractere do mês não está entre os valores que representam de "1" a "9", na tabela ascii.
-        if (valor_do_segundo_caractere < 49 or valor_do_segundo_caractere > 57){
-            return false;
-        }
-    }
-    // Se o valor do primeiro caractere do mês é valor que representa "1", na tabela ascii.
-    if (valor_do_primeiro_caractere == 49){
-        // Se o valor do segundo caractere do mês não está entre os valores que representam de "0" a "2", na tabela ascii.
-        if (valor_do_segundo_caractere < 48 or valor_do_segundo_caractere > 50){
-            return false;
-        }
-    }
-    // ANO
-    valor_do_primeiro_caractere = valor[6];
-    // Se o valor do primeiro caractere do ano não está entre os valores que representam de "2" a "9", na tabela ascii.
-    if (valor_do_primeiro_caractere < 50 or valor_do_primeiro_caractere > 57){
-        return false;
-    }
-    valor_do_segundo_caractere = valor[7];
-    // Se o valor do primeiro caractere do ano é valor que representa "2", na tabela ascii.
-    if (valor_do_primeiro_caractere == 50){
-        // Se o valor do segundo caractere do ano não está entre os valores que representam de "1" a "9", na tabela ascii.
-        if (valor_do_segundo_caractere < 49 or valor_do_segundo_caractere > 57){
-            return false;
-        }
-    }
-    // Se o valor do segundo caractere do ano não está entre os valores que representam de "0" a "9", na tabela ascii ou existe um terceiro número em "ano".
-    if (valor_do_segundo_caractere < 48 or valor_do_segundo_caractere > 57 or valor[8] != '\0'){
-        return false;
-    }
-    return true;
 }
 
 Senha::Senha(){
@@ -635,5 +585,51 @@ bool Senha::validar(string valor){
     }
 
     return true;
+}
 
+Telefone::Telefone(){
+    valor = DEFAULT;
+}
+
+Telefone::Telefone(string valor){
+    this->valor = valor;
+}
+
+void Telefone::setValor(string valor){
+    if (validar(valor)){
+        this->valor = valor;
+    }else{
+        throw invalid_argument("Argumento invalido.");
+    }
+}
+
+bool Telefone::validar(string valor){
+
+    int zeros = 0,i = 0,preFixo = 0;
+    //retorna false caso o prefixo nao esteja no formato corrreto
+    if(valor[0] == '(' && valor[4] == ')' && valor[5] == '-'){
+        while(valor[i] != '\0'){
+            //regista a ocorrencia de zeros
+            if(valor[i] == 48){
+                zeros++;
+            }
+            //caso esta condicional seja ativada significa que o formato "(000)-000000000" foi fornecido
+            if(zeros >= 12){
+                return false;
+            }
+            //verifica a ocorrencia dos digitos de 0 a 9
+            // verifica a ocorrencia dos caracteres "(", ")" e "-"
+            if(valor[i] >= 48 && valor[i] <= 57 || valor[i] == 40 || valor[i] == 41 || valor[i] == 45){
+                i++;
+            }else{
+                return false;
+            }
+        }
+        //caso o numero de caracteres excedam o requisito
+        if(i == 15){
+        }else{
+            return false;
+        }
+        return true;
+    }
 }

@@ -4,6 +4,8 @@
 #define N_TESTES_H
 #include "n_dominios.h"
 
+// TESTES UNITÁRIOS DE DOMÍNIOS.
+
 class TUCodigo{
 private:
 
@@ -14,7 +16,6 @@ private:
 
     // Referência para o objeto a ser testado.
     Codigo *codigo;
-
 
     // Estado do teste.
 
@@ -49,6 +50,38 @@ private:
     // Referência para o objeto a ser testado.
     Classe *classe;
 
+    // Estado do teste.
+
+    int estado;
+
+    // Declarações de métodos.
+
+    void setUp();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+    void tearDown();
+
+public:
+
+    // Definições de constantes para reportar resultado do teste.
+
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+
+    int executar();
+    // void testarCenario();
+};
+
+class TUDescricao{
+private:
+
+    // Definições de constantes para evitar números mágicos.
+
+    const string VALOR_VALIDO   = "12345.";
+    const string VALOR_INVALIDO = "123451234512345123451234512345";
+
+    // Referência para o objeto a ser testado.
+    Descricao *descricao;
 
     // Estado do teste.
 
@@ -83,6 +116,38 @@ private:
     // Referência para o objeto a ser testado.
     Endereco *endereco;
 
+    // Estado do teste.
+
+    int estado;
+
+    // Declarações de métodos.
+
+    void setUp();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+    void tearDown();
+
+public:
+
+    // Definições de constantes para reportar resultado do teste.
+
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+
+    int executar();
+    // void testarCenario();
+};
+
+class TUData{
+private:
+
+    // Definições de constantes para evitar números mágicos.
+
+    const string VALOR_VALIDO   = "16-03-21";
+    const string VALOR_INVALIDO = "0123456789";
+
+    // Referência para o objeto a ser testado.
+    Data *data;
 
     // Estado do teste.
 
@@ -117,7 +182,6 @@ private:
     // Referência para o objeto a ser testado.
     Numero *numero;
 
-
     // Estado do teste.
 
     int estado;
@@ -140,17 +204,16 @@ public:
     // void testarCenario();
 };
 
-class TUEmail {
+class TUMoeda {
 private:
 
     // Definições de constantes para evitar números mágicos.
 
-    const string VALOR_VALIDO   = "nome@domínio";
-    const string VALOR_INVALIDO = "nomenomenome@domínio";
+    double VALOR_VALIDO   = 100;
+    double VALOR_INVALIDO = -0.99;
 
     // Referência para o objeto a ser testado.
-    Email *email;
-
+    Moeda *moeda;
 
     // Estado do teste.
 
@@ -185,7 +248,6 @@ private:
     // Referência para o objeto a ser testado.
     Nome *nome;
 
-
     // Estado do teste.
 
     int estado;
@@ -208,119 +270,16 @@ public:
     // void testarCenario();
 };
 
-class TUMoeda {
+class TUEmail {
 private:
 
     // Definições de constantes para evitar números mágicos.
 
-    double VALOR_VALIDO   = 100;
-    double VALOR_INVALIDO = -0.99;
+    const string VALOR_VALIDO   = "nome@domínio";
+    const string VALOR_INVALIDO = "nomenomenome@domínio";
 
     // Referência para o objeto a ser testado.
-    Moeda *moeda;
-
-
-    // Estado do teste.
-
-    int estado;
-
-    // Declarações de métodos.
-
-    void setUp();
-    void testarCenarioSucesso();
-    void testarCenarioFalha();
-    void tearDown();
-
-public:
-
-    // Definições de constantes para reportar resultado do teste.
-
-    const static int SUCESSO =  0;
-    const static int FALHA   = -1;
-
-    int executar();
-    // void testarCenario();
-};
-
-class TUTelefone{
-private:
-
-    // Definições de constantes para evitar números mágicos.
-
-    const string VALOR_VALIDO   = "(123)-123456789";
-    const string VALOR_INVALIDO = "(061924)-567865";
-
-    // Referência para o objeto a ser testado.
-    Telefone *telefone;
-
-
-    // Estado do teste.
-
-    int estado;
-
-    // Declarações de métodos.
-
-    void setUp();
-    void testarCenarioSucesso();
-    void testarCenarioFalha();
-    void tearDown();
-
-public:
-
-    // Definições de constantes para reportar resultado do teste.
-
-    const static int SUCESSO =  0;
-    const static int FALHA   = -1;
-
-    int executar();
-    // void testarCenario();
-};
-
-class TUDescricao{
-private:
-
-    // Definições de constantes para evitar números mágicos.
-
-    const string VALOR_VALIDO   = "12345.";
-    const string VALOR_INVALIDO = "123451234512345123451234512345";
-
-    // Referência para o objeto a ser testado.
-    Descricao *descricao;
-
-
-    // Estado do teste.
-
-    int estado;
-
-    // Declarações de métodos.
-
-    void setUp();
-    void testarCenarioSucesso();
-    void testarCenarioFalha();
-    void tearDown();
-
-public:
-
-    // Definições de constantes para reportar resultado do teste.
-
-    const static int SUCESSO =  0;
-    const static int FALHA   = -1;
-
-    int executar();
-    // void testarCenario();
-};
-
-class TUData{
-private:
-
-    // Definições de constantes para evitar números mágicos.
-
-    const string VALOR_VALIDO   = "16-03-21";
-    const string VALOR_INVALIDO = "0123456789";
-
-    // Referência para o objeto a ser testado.
-    Data *data;
-
+    Email *email;
 
     // Estado do teste.
 
@@ -355,6 +314,38 @@ private:
     // Referência para o objeto a ser testado.
     Senha *senha;
 
+    // Estado do teste.
+
+    int estado;
+
+    // Declarações de métodos.
+
+    void setUp();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+    void tearDown();
+
+public:
+
+    // Definições de constantes para reportar resultado do teste.
+
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+
+    int executar();
+    // void testarCenario();
+};
+
+class TUTelefone{
+private:
+
+    // Definições de constantes para evitar números mágicos.
+
+    const string VALOR_VALIDO   = "(123)-123456789";
+    const string VALOR_INVALIDO = "(061924)-567865";
+
+    // Referência para o objeto a ser testado.
+    Telefone *telefone;
 
     // Estado do teste.
 
@@ -378,5 +369,102 @@ public:
     // void testarCenario();
 };
 
+// TESTES UNITÁRIOS DE ENTIDADES.
+
+class TUImovel {
+
+private:
+
+    // Definições de constantes para evitar números mágicos.
+
+    const static int VALOR_VALIDO   = 20;
+
+    // Referência para o objeto a ser testado.
+
+    Imovel *imovel;
+
+    // Estado do teste.
+
+    int estado;
+
+    // Declarações de métodos.
+
+    void setUp();
+    void tearDown();
+    void testarCenario();
+
+public:
+
+    // Definições de constantes para reportar resultado do teste.
+
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+
+    int run();
+};
+
+class TUProposta {
+
+private:
+
+    // Definições de constantes para evitar números mágicos.
+
+    const static int VALOR_VALIDO   = 20;
+
+    // Referência para o objeto a ser testado.
+
+    Proposta *proposta;
+
+    // Estado do teste.
+
+    int estado;
+
+    // Declarações de métodos.
+
+    void setUp();
+    void tearDown();
+    void testarCenario();
+
+public:
+
+    // Definições de constantes para reportar resultado do teste.
+
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+
+    int run();
+};
+
+class TUUsuario {
+
+private:
+
+    // Definições de constantes para evitar números mágicos.
+
+    const static int VALOR_VALIDO   = 20;
+
+    // Referência para o objeto a ser testado.
+
+    Usuario *usuario;
+
+    // Estado do teste.
+
+    int estado;
+
+    // Declarações de métodos.
+
+    void setUp();
+    void tearDown();
+    void testarCenario();
+
+public:
+
+    // Definições de constantes para reportar resultado do teste.
+
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+
+    int run();
+};
 
 #endif

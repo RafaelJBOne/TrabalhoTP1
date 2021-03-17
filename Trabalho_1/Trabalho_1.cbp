@@ -32,6 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="entidades.cpp" />
+		<Unit filename="entidades.h" />
 		<Unit filename="n_dominios.cpp" />
 		<Unit filename="n_dominios.h" />
 		<Unit filename="n_main.cpp" />
