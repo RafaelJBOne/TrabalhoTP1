@@ -1,6 +1,16 @@
 // DOMINIOS.CPP:
 #include "n_dominios.h"
 
+const string Codigo::DEFAULT = "XXXXX";
+const string Descricao::DEFAULT = "123456.";
+const string Endereco::DEFAULT = "Conj 08 lote 14.5";
+const string Data::DEFAULT = "DD-MM-AA";
+const double Moeda::DEFAULT = 10;
+const string Nome::DEFAULT = "Johnatan. Sousa";
+const string Email::DEFAULT = "nome@domínio";
+const string Senha::DEFAULT = "Ab0cde";
+const string Telefone::DEFAULT = "(123)-123456789";
+
 Codigo::Codigo(){
     valor = DEFAULT;
 }
@@ -18,7 +28,6 @@ void Codigo::setValor(string valor){
 }
 
 bool Codigo::validar(string valor){
-
    //validacao de parametros de codigo
    int i = 0;
    //laco para percorer o nome
@@ -92,7 +101,6 @@ bool Classe::validar(int valor){
         return false;
         break;
     }
-
     return true;
 }
 
@@ -176,7 +184,6 @@ bool Endereco::validar(string valor){
     }else{
         return false;
     }
-
     return true;
 }
 
@@ -205,7 +212,6 @@ bool Data::validar(string valor){
     if (valor_do_primeiro_caractere < 48 or valor_do_primeiro_caractere > 51){
         return false;
     }
-
     valor_do_segundo_caractere = valor[1];
     // Se o valor do primeiro caractere do dia é valor que representa "0", na tabela ascii.
     if (valor_do_primeiro_caractere == 48){
@@ -231,7 +237,6 @@ bool Data::validar(string valor){
     if (valor_do_primeiro_caractere != 48 && valor_do_primeiro_caractere != 49){
         return false;
     }
-
     valor_do_segundo_caractere = valor[4];
     // Se o valor do primeiro caractere do mês é valor que representa "0", na tabela ascii.
     if (valor_do_primeiro_caractere == 48){
@@ -308,8 +313,7 @@ void Moeda::setValor(double valor){
 }
 
 bool Moeda::validar(double valor){
-
-    if(valor >= 0 && valor <= 1000000){
+    if(valor >= 0.00 && valor <= 1000000.00){
         return true;
     }else{
         return false;
@@ -334,8 +338,7 @@ void Nome::setValor(string valor){
 }
 
 bool Nome::validar(string valor){
-
-    //avaliacao de nomes
+   //avaliacao de nomes
    //variavel contadora
    int i = 0;
    //contador para o segundo while
@@ -409,7 +412,6 @@ bool Nome::validar(string valor){
         }else{
             return false;
         }
-
     return true;
 }
 
@@ -604,7 +606,6 @@ void Telefone::setValor(string valor){
 }
 
 bool Telefone::validar(string valor){
-
     int zeros = 0,i = 0,preFixo = 0;
     //retorna false caso o prefixo nao esteja no formato corrreto
     if(valor[0] == '(' && valor[4] == ')' && valor[5] == '-'){

@@ -2,25 +2,23 @@
 #ifndef N_DOMINIOS_H
 #define N_DOMINIOS_H
 #include <iostream>
-// #ifndef DOMINIOS_H_INCLUDED
-
 #include <stdexcept>
+#include <string>
 
 using namespace std;
 
-/// A classe Codigo representa um codigo associado ao usu√°rio.
-/// Codigo disp√µe dos seguintes m√©todos:
-///     M√©todos construtores sem e com passagem de par√¢metro;
-///     M√©todo "setValor" com passagem de par√¢metro que define a string padr√£o;
-///     M√©todo "getValor" sem passagem de par√¢metro que obt√©m a string armazenada;
-///     M√©todo "validar" com passagem de par√¢metro que retorna se a string passada √© v√°lida ou n√£o.
+/// A classe "Codigo" representa um cÛdigo associado ao usu·rio.
+/// "Codigo" dispıe dos seguintes mÈtodos:
+///     MÈtodos construtores sem e com passagem de par‚metro;
+///     "setValor(int)" com passagem de par‚metro que define a string padr„o;
+///     "getValor()" sem passagem de par‚metro que obtÈm a string armazenada;
+///     "validar(int)" com passagem de par‚metro que retorna se a string passada È v·lida ou n„o.
 
 class Codigo {
     private:
-
         //variavel padrao caso n receba nada
-        const string DEFAULT = "XXXXX";
-        //definindo a variavel que sera usada para atribui√ßao de valor
+        static const string DEFAULT;
+        //definindo a variavel que sera usada para atribuiÁao de valor
         string valor;
     public:
         //primeiro metodo construtor no caso de nao aver nada 'Email()'
@@ -40,19 +38,18 @@ inline string Codigo::getValor(){
     return valor;
 };
 
-/// A classe Classe recebe um n√∫mero inteiro referente as categorias de im√≥veis.
-/// Classe disp√µe dos seguintes m√©todos:
-///     M√©todos construtores sem e com passagem de par√¢metro;
-///     M√©todo "setValor" com passagem de par√¢metro que define a string padr√£o;
-///     M√©todo "getValor" sem passagem de par√¢metro que obt√©m a string armazenada;
-///     M√©todo "validar" com passagem de par√¢metro que retorna se o n√∫mero passado √© v√°lido ou n√£o.
+/// A classe "Classe" recebe um n˙mero inteiro referente as categorias de imÛveis.
+/// "Classe" dispıe dos seguintes mÈtodos:
+///     MÈtodos construtores sem e com passagem de par‚metro;
+///     "setValor(int)": com passagem de par‚metro que define a string padr„o;
+///     "getValor()": sem passagem de par‚metro que obtÈm a string armazenada;
+///     "validar(int)": com passagem de par‚metro que retorna se o n˙mero passado È v·lido ou n„o.
 
 class Classe {
     private:
-
         //variavel padrao caso n receba nada
-        const int DEFAULT = 1;
-        //definindo a variavel que sera usada para atribui√ßao de valor
+        static const int DEFAULT = 1;
+        //definindo a variavel que sera usada para atribuiÁao de valor
         int valor;
     public:
         //primeiro metodo construtor no caso de nao aver nada 'Email()'
@@ -72,19 +69,18 @@ inline int Classe::getValor(){
     return valor;
 };
 
-/// A classe Descricao recebe uma string referente as caracteristicas dos im√≥veis.
-/// Descricao disp√µe dos seguintes m√©todos:
-///     M√©todos construtores sem e com passagem de par√¢metro;
-///     M√©todo "setValor" com passagem de par√¢metro que define a string padr√£o;
-///     M√©todo "getValor" sem passagem de par√¢metro que obt√©m a string armazenada;
-///     M√©todo "validar" com passagem de par√¢metro que retorna se a string passada √© v√°lida ou n√£o.
+/// A classe "Descricao" recebe uma string referente as caracterÌsticas dos imÛveis.
+/// "Descricao" dispıe dos seguintes mÈtodos:
+///     MÈtodos construtores sem e com passagem de par‚metro;
+///     "setValor(string)" com passagem de par‚metro que define a string padr„o;
+///     "getValor()" sem passagem de par‚metro que obtÈm a string armazenada;
+///     "validar(string)" com passagem de par‚metro que retorna se a string passada È v·lida ou n„o.
 
 class Descricao {
     private:
-
         //variavel padrao caso n receba nada
-        const string DEFAULT = "123456";
-        //definindo a variavel que sera usada para atribui√ßao de valor
+        static const string DEFAULT;
+        //definindo a variavel que sera usada para atribuiÁao de valor
         string valor;
     public:
         //primeiro metodo construtor no caso de nao aver nada 'Email()'
@@ -99,19 +95,23 @@ class Descricao {
         bool validar (string);
 };
 
-/// A classe Endereco recebe uma string referente endere√ßo do im√≥veil.
-/// Endereco disp√µe dos seguintes m√©todos:
-///     M√©todos construtores sem e com passagem de par√¢metro;
-///     M√©todo "setValor" com passagem de par√¢metro que define a string padr√£o;
-///     M√©todo "getValor" sem passagem de par√¢metro que obt√©m a string armazenada;
-///     M√©todo "validar" com passagem de par√¢metro que retorna se a string passada √© v√°lida ou n√£o.
+// metodo onde retona o valor obitido
+inline string Descricao::getValor(){
+    return valor;
+};
+
+/// A classe "Endereco" recebe uma string referente endereÁo do imÛvel.
+/// "Endereco" dispıe dos seguintes mÈtodos:
+///     MÈtodos construtores sem e com passagem de par‚metro;
+///     "setValor(string)": com passagem de par‚metro que define a string padr„o;
+///     "getValor()" sem passagem de par‚metro que obtÈm a string armazenada;
+///     "validar(string)" com passagem de par‚metro que retorna se a string passada È v·lida ou n„o.
 
 class Endereco {
     private:
-
         //variavel padrao caso n receba nada
-        const string DEFAULT = "Conj 08 lote 14.5";
-        //definindo a variavel que sera usada para atribui√ßao de valor
+        static const string DEFAULT;
+        //definindo a variavel que sera usada para atribuiÁao de valor
         string valor;
     public:
         //primeiro metodo construtor no caso de nao aver nada 'Email()'
@@ -131,24 +131,18 @@ inline string Endereco::getValor(){
     return valor;
 };
 
-// metodo onde retona o valor obitido
-inline string Descricao::getValor(){
-    return valor;
-};
-
-/// A classe Data recebe strings referente as datas de aluguel do im√≥veil.
-/// Data disp√µe dos seguintes m√©todos:
-///     M√©todos construtores sem e com passagem de par√¢metro;
-///     M√©todo "setValor" com passagem de par√¢metro que define a string padr√£o;
-///     M√©todo "getValor" sem passagem de par√¢metro que obt√©m a string armazenada;
-///     M√©todo "validar" com passagem de par√¢metro que retorna se a string passada √© v√°lida ou n√£o.
+/// A classe "Data" recebe strings referente as datas de aluguel do imÛvel.
+/// "Data" dispıe dos seguintes mÈtodos:
+///     MÈtodos construtores sem e com passagem de par‚metro;
+///     "setValor(int)":com passagem de par‚metro que define a string padr„o;
+///     "getValor()": sem passagem de par‚metro que obtÈm a string armazenada;
+///     "validar(int)": com passagem de par‚metro que retorna se a string passada È v·lida ou n„o.
 
 class Data {
     private:
-
         //variavel padrao caso n receba nada
-        const string DEFAULT = "DD-MM-AA";
-        //definindo a variavel que sera usada para atribui√ßao de valor
+        static const string DEFAULT;
+        //definindo a variavel que sera usada para atribuiÁao de valor
         string valor;
     public:
         //primeiro metodo construtor no caso de nao aver nada 'Email()'
@@ -168,12 +162,12 @@ inline string Data::getValor(){
     return valor;
 };
 
-/// Classe de dom√≠nio Numero representa a quantidade de h√≥spedes.
-/// Numero disp√µe dos seguintes m√©todos:
-///     M√©todos construtores sem e com passagem de par√¢metro;
-///     M√©todo "setValor" com passagem de par√¢metro que define valor;
-///     M√©todo "getValor" sem passagem de par√¢metro que obt√©m valor;
-///     M√©todo "validar" com passagem de par√¢metro que retorna se o valor passado √© v√°lido ou n√£o.
+/// Classe de domÌnio "Numero" representa a quantidade de hÛspedes.
+/// "Numero" dispıe dos seguintes mÈtodos:
+///     MÈtodos construtores sem e com passagem de par‚metro;
+///     "setValor(int)": com passagem de par‚metro que define valor;
+///     "getValor()": sem passagem de par‚metro que obtÈm valor;
+///     "validar(int)": com passagem de par‚metro que retorna se o valor passado È v·lido ou n„o.
 
 class Numero {
     private:
@@ -191,16 +185,16 @@ inline int Numero::getValor(){
     return valor;
 };
 
-/// Classe de dom√≠nio Moeda representa o valor monet√°rio √∫ltilizado pelo usu√°rio.
-/// Moeda disp√µe dos seguintes m√©todos:
-///     M√©todos construtores sem e com passagem de par√¢metro;
-///     M√©todo "setValor" com passagem de par√¢metro que define valor;
-///     M√©todo "getValor" sem passagem de par√¢metro que obt√©m valor;
-///     M√©todo "validar" com passagem de par√¢metro que retorna se o valor passado √© v√°lido ou n√£o.
+/// Classe de domÌnio "Moeda" representa o valor monet·rio ˙ltilizado pelo usu·rio.
+/// "Moeda" dispıe dos seguintes mÈtodos:
+///     MÈtodos construtores sem e com passagem de par‚metro;
+///     "setValor(int)": com passagem de par‚metro que define valor;
+///     "getValor()": sem passagem de par‚metro que obtÈm valor;
+///     "validar(int)": com passagem de par‚metro que retorna se o valor passado È v·lido ou n„o.
 
 class Moeda {
     private:
-        double DEFAULT = 10;
+        static const double DEFAULT;
         double valor;
     public:
         Moeda();
@@ -214,19 +208,18 @@ inline double Moeda::getValor(){
     return valor;
 }
 
-/// Classe de dom√≠nio Nome representa o nome do usu√°rio.
-/// Nome disp√µe dos seguintes m√©todos:
-///     M√©todos construtores sem e com passagem de par√¢metro;
-///     M√©todo "setValor" com passagem de par√¢metro que define valor;
-///     M√©todo "getValor" sem passagem de par√¢metro que obt√©m valor;
-///     M√©todo "validar" com passagem de par√¢metro que retorna se a string passada √© v√°lida ou n√£o.
+/// Classe de domÌnio "Nome" representa o nome do usu·rio.
+/// "Nome" dispıe dos seguintes mÈtodos:
+///     MÈtodos construtores sem e com passagem de par‚metro;
+///     "setValor(int)": com passagem de par‚metro que define valor;
+///     "getValor()": sem passagem de par‚metro que obtÈm valor;
+///     "validar(int)": com passagem de par‚metro que retorna se a string passada È v·lida ou n„o.
 
 class Nome {
     private:
-
         //variavel padrao caso n receba nada
-        const string DEFAULT = "Johnatan. Sousa";
-        //definindo a variavel que sera usada para atribui√ßao de valor
+        static const string DEFAULT;
+        //definindo a variavel que sera usada para atribuiÁao de valor
         string valor;
     public:
         //primeiro metodo construtor no caso de nao aver nada 'Email()'
@@ -246,20 +239,18 @@ inline string Nome::getValor(){
     return valor;
 };
 
-
-/// Classe de dom√≠nio Email representa o endere√ßo eletr√¥nico √∫ltilizado pelo usu√°rio.
-/// Email disp√µe dos seguintes m√©todos:
-///     M√©todos construtores sem e com passagem de par√¢metro;
-///     M√©todo "setValor" com passagem de par√¢metro que define valor;
-///     M√©todo "getValor" sem passagem de par√¢metro que obt√©m valor;
-///     M√©todo "validar" com passagem de par√¢metro que retorna se a string passada √© v√°lida ou n√£o.
+/// Classe de domÌnio "Email" representa o endereÁo eletrÙnico ˙ltilizado pelo usu·rio.
+/// "Email" dispıe dos seguintes mÈtodos:
+///     MÈtodos construtores sem e com passagem de par‚metro;
+///     "setValor(int)": com passagem de par‚metro que define valor;
+///     "getValor()": sem passagem de par‚metro que obtÈm valor;
+///     "validar(int)": com passagem de par‚metro que retorna se a string passada È v·lida ou n„o.
 
 class Email {
     private:
-
         //variavel padrao caso n receba nada
-        const string DEFAULT = "nome@dom√≠nio";
-        //definindo a variavel que sera usada para atribui√ßao de valor
+        static const string DEFAULT;
+        //definindo a variavel que sera usada para atribuiÁao de valor
         string valor;
     public:
         //primeiro metodo construtor no caso de nao aver nada 'Email()'
@@ -279,20 +270,18 @@ inline string Email::getValor(){
     return valor;
 };
 
-
-/// Classe de dom√≠nio Senha representa a senha de acesso √∫ltilizada pelo usu√°rio.
-/// Senha disp√µe dos seguintes m√©todos:
-///     M√©todos construtores sem e com passagem de par√¢metro;
-///     M√©todo "setValor" com passagem de par√¢metro que define valor;
-///     M√©todo "getValor" sem passagem de par√¢metro que obt√©m valor;
-///     M√©todo "validar" com passagem de par√¢metro que retorna se a string passada √© v√°lida ou n√£o.
+/// Classe de domÌnio "Senha" representa a senha de acesso ˙ltilizada pelo usu·rio.
+/// "Senha" dispıe dos seguintes mÈtodos:
+///     MÈtodos construtores sem e com passagem de par‚metro;
+///     "setValor(int)" com passagem de par‚metro que define valor;
+///     "getValor()" sem passagem de par‚metro que obtÈm valor;
+///     "validar(int)" com passagem de par‚metro que retorna se a string passada È v·lida ou n„o.
 
 class Senha {
     private:
-
         //variavel padrao caso n receba nada
-        const string DEFAULT = "XXXXXX";
-        //definindo a variavel que sera usada para atribui√ßao de valor
+        static const string DEFAULT;
+        //definindo a variavel que sera usada para atribuiÁao de valor
         string valor;
     public:
         //primeiro metodo construtor no caso de nao aver nada 'Email()'
@@ -312,20 +301,18 @@ inline string Senha::getValor(){
     return valor;
 };
 
-
-/// Classe de dom√≠nio Telefone representa o n√∫mero telef√¥nico de contato √∫ltilizado pelo usu√°rio.
-/// Telefone disp√µe dos seguintes m√©todos:
-///     M√©todos construtores sem e com passagem de par√¢metro;
-///     M√©todo "setValor" com passagem de par√¢metro que define valor;
-///     M√©todo "getValor" sem passagem de par√¢metro que obt√©m valor;
-///     M√©todo "validar" com passagem de par√¢metro que retorna se a string passada √© v√°lida ou n√£o.
+/// Classe de domÌnio "Telefone" representa o n˙mero telefÙnico de contato ˙ltilizado pelo usu·rio.
+/// "Telefone" dispıe dos seguintes mÈtodos:
+///     MÈtodos construtores sem e com passagem de par‚metro;
+///     "setValor(int)": com passagem de par‚metro que define valor;
+///     "getValor()": sem passagem de par‚metro que obtÈm valor;
+///     "validar(int)": com passagem de par‚metro que retorna se a string passada È v·lida ou n„o.
 
 class Telefone {
     private:
-
         //variavel padrao caso n receba nada
-        const string DEFAULT = "(123)-123456789";
-        //definindo a variavel que sera usada para atribui√ßao de valor
+        static const string DEFAULT;
+        //definindo a variavel que sera usada para atribuiÁao de valor
         string valor;
     public:
         //primeiro metodo construtor no caso de nao aver nada 'Email()'

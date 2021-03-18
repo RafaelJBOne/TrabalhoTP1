@@ -1,12 +1,13 @@
 // Exemplos desenvolvidos para ilustrar a sintaxe da linguagem.
 #include <iostream>
 #include "n_dominios.h"
-//#include "entidades.h"
+#include "n_entidades.h"
 #include "n_testes.h"
 
 using namespace std;
 
 int main(){
+    cout << "   TESTES DE DOMÍNIOS:" << endl;
 
     TUCodigo testeA;
 
@@ -108,12 +109,32 @@ int main(){
                                 break;
     }
 
-    TuImovel testeL;
+    cout << "   TESTES DE ENTIDADES:" << endl;
+
+    TUImovel testeL;
 
     switch(testeL.executar()){
         case TUImovel::SUCESSO: cout << "SUCESSO - IMOVEL" << endl;
                                 break;
         case TUImovel::FALHA  : cout << "FALHA   - IMOVEL" << endl;
+                                break;
+    }
+
+    TUProposta testeM;
+
+    switch(testeM.executar()){
+        case TUProposta::SUCESSO: cout << "SUCESSO - PROPOSTA" << endl;
+                                break;
+        case TUProposta::FALHA  : cout << "FALHA   - PROPOSTA" << endl;
+                                break;
+    }
+
+    TUUsuario testeN;
+
+    switch(testeN.executar()){
+        case TUUsuario::SUCESSO: cout << "SUCESSO - USUARIO" << endl;
+                                break;
+        case TUUsuario::FALHA  : cout << "FALHA   - USUARIO" << endl;
                                 break;
     }
 

@@ -1,20 +1,23 @@
 # depslib dependency file v1.0
-1615955372 source:c:\users\kelson\desktop\trabalho_1\n_dominios.cpp
+1616049378 source:c:\users\kelson\desktop\trabalho_1\n_dominios.cpp
 	"n_dominios.h"
 
-1615954873 c:\users\kelson\desktop\trabalho_1\n_dominios.h
+1616055992 c:\users\kelson\desktop\trabalho_1\n_dominios.h
 	<iostream>
 	<stdexcept>
+	<string>
 
-1615952133 source:c:\users\kelson\desktop\trabalho_1\n_main.cpp
+1616049300 source:c:\users\kelson\desktop\trabalho_1\n_main.cpp
 	<iostream>
 	"n_dominios.h"
+	"n_entidades.h"
 	"n_testes.h"
 
-1615954583 c:\users\kelson\desktop\trabalho_1\n_testes.h
+1616050160 c:\users\kelson\desktop\trabalho_1\n_testes.h
 	"n_dominios.h"
+	"n_entidades.h"
 
-1615952133 source:c:\users\kelson\desktop\trabalho_1\n_testes.cpp
+1616049577 source:c:\users\kelson\desktop\trabalho_1\n_testes.cpp
 	"n_testes.h"
 
 1615951748 source:c:\users\intel\desktop\trabalho_1\n_dominios.cpp
@@ -34,4 +37,10 @@
 
 1615950416 source:c:\users\intel\desktop\trabalho_1\n_testes.cpp
 	"n_testes.h"
+
+1615962168 source:c:\users\kelson\desktop\trabalho_1\n_entidades.cpp
+	"n_entidades.h"
+
+1616056078 c:\users\kelson\desktop\trabalho_1\n_entidades.h
+	"n_dominios.h"
 

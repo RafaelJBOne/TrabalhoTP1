@@ -3,16 +3,16 @@
 #ifndef N_TESTES_H
 #define N_TESTES_H
 #include "n_dominios.h"
+#include "n_entidades.h"
 
 // TESTES UNITÁRIOS DE DOMÍNIOS.
 
 class TUCodigo{
 private:
-
     // Definições de constantes para evitar números mágicos.
 
-    const string VALOR_VALIDO   = "XXXXX";
-    const string VALOR_INVALIDO = "XXXXx";
+    static const string VALOR_VALIDO;
+    static const string VALOR_INVALIDO;
 
     // Referência para o objeto a ser testado.
     Codigo *codigo;
@@ -29,7 +29,6 @@ private:
     void tearDown();
 
 public:
-
     // Definições de constantes para reportar resultado do teste.
 
     const static int SUCESSO =  0;
@@ -41,7 +40,6 @@ public:
 
 class TUClasse{
 private:
-
     // Definições de constantes para evitar números mágicos.
 
     const static int VALOR_VALIDO   = 1;
@@ -60,9 +58,7 @@ private:
     void testarCenarioSucesso();
     void testarCenarioFalha();
     void tearDown();
-
 public:
-
     // Definições de constantes para reportar resultado do teste.
 
     const static int SUCESSO =  0;
@@ -74,11 +70,10 @@ public:
 
 class TUDescricao{
 private:
-
     // Definições de constantes para evitar números mágicos.
 
-    const string VALOR_VALIDO   = "12345.";
-    const string VALOR_INVALIDO = "123451234512345123451234512345";
+    static const string VALOR_VALIDO;
+    static const string VALOR_INVALIDO;
 
     // Referência para o objeto a ser testado.
     Descricao *descricao;
@@ -110,8 +105,8 @@ private:
 
     // Definições de constantes para evitar números mágicos.
 
-    const string VALOR_VALIDO   = "Conj 08 lote 14.5";
-    const string VALOR_INVALIDO = "*****";
+    static const string VALOR_VALIDO;
+    static const string VALOR_INVALIDO;
 
     // Referência para o objeto a ser testado.
     Endereco *endereco;
@@ -143,8 +138,8 @@ private:
 
     // Definições de constantes para evitar números mágicos.
 
-    const string VALOR_VALIDO   = "16-03-21";
-    const string VALOR_INVALIDO = "0123456789";
+    static const string VALOR_VALIDO;
+    static const string VALOR_INVALIDO;
 
     // Referência para o objeto a ser testado.
     Data *data;
@@ -377,7 +372,14 @@ private:
 
     // Definições de constantes para evitar números mágicos.
 
-    const static int VALOR_VALIDO   = 20;
+    static const string VALOR_VALIDO_DE_CODIGO;
+    static const int VALOR_VALIDO_DE_CLASSE = 1;
+    static const string VALOR_VALIDO_DE_DESCRICAO;
+    static const string VALOR_VALIDO_DE_ENDERECO;
+    static const string VALOR_VALIDO_DE_DATA_INICIAL;
+    static const string VALOR_VALIDO_DE_DATA_FINAL;
+    static const int VALOR_VALIDO_DE_HOSPEDES = 0;
+    static const double VALOR_VALIDO_DE_VALOR;
 
     // Referência para o objeto a ser testado.
 
@@ -400,7 +402,7 @@ public:
     const static int SUCESSO =  0;
     const static int FALHA   = -1;
 
-    int run();
+    int executar();
 };
 
 class TUProposta {
@@ -409,7 +411,11 @@ private:
 
     // Definições de constantes para evitar números mágicos.
 
-    const static int VALOR_VALIDO   = 20;
+    static const string VALOR_VALIDO_DE_CODIGO;
+    static const string VALOR_VALIDO_DE_DATA_INICIAL;
+    static const string VALOR_VALIDO_DE_DATA_FINAL;
+    static const int VALOR_VALIDO_DE_HOSPEDES = 0;
+    static const double VALOR_VALIDO_DE_VALOR;
 
     // Referência para o objeto a ser testado.
 
@@ -432,7 +438,7 @@ public:
     const static int SUCESSO =  0;
     const static int FALHA   = -1;
 
-    int run();
+    int executar();
 };
 
 class TUUsuario {
@@ -441,7 +447,10 @@ private:
 
     // Definições de constantes para evitar números mágicos.
 
-    const static int VALOR_VALIDO   = 20;
+    static const string VALOR_VALIDO_DE_NOME;
+    static const string VALOR_VALIDO_DE_EMAIL;
+    static const string VALOR_VALIDO_DE_SENHA;
+    static const string VALOR_VALIDO_DE_TELEFONE;
 
     // Referência para o objeto a ser testado.
 
@@ -464,7 +473,7 @@ public:
     const static int SUCESSO =  0;
     const static int FALHA   = -1;
 
-    int run();
+    int executar();
 };
 
 #endif
