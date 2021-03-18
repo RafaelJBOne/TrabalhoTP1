@@ -219,7 +219,7 @@ inline double Moeda::getValor(){
 ///     Métodos construtores sem e com passagem de parâmetro;
 ///     Método "setValor" com passagem de parâmetro que define valor;
 ///     Método "getValor" sem passagem de parâmetro que obtém valor;
-///     Método "validar" com passagem de parâmetro que retorna se o valor passado é válido ou não.
+///     Método "validar" com passagem de parâmetro que retorna se a string passada é válida ou não.
 
 class Nome {
     private:
