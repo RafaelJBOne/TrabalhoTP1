@@ -606,13 +606,31 @@ void Telefone::setValor(string valor){
 }
 
 bool Telefone::validar(string valor){
-    int zeros = 0,i = 0,preFixo = 0;
+    int zeros = 0,i = 0,preFixo = 0, j = 0, k = 0, l = 0;
     //retorna false caso o prefixo nao esteja no formato corrreto
     if(valor[0] == '(' && valor[4] == ')' && valor[5] == '-'){
         while(valor[i] != '\0'){
             //regista a ocorrencia de zeros
             if(valor[i] == 48){
                 zeros++;
+            }
+            if(valor[i] == 40){
+                j++;
+            }
+            if(j > 1){
+                return false;
+            }
+            if(valor[i] == 41){
+                k++;
+            }
+            if(k > 1){
+                return false;
+            }
+            if(valor[i] == 45){
+                l++;
+            }
+            if(l > 1){
+                return false;
             }
             //caso esta condicional seja ativada significa que o formato "(000)-000000000" foi fornecido
             if(zeros >= 12){
@@ -631,6 +649,9 @@ bool Telefone::validar(string valor){
         }else{
             return false;
         }
-        return true;
+    }else{
+        return false;
     }
+
+    return true;
 }
