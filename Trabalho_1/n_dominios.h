@@ -8,12 +8,19 @@
 
 using namespace std;
 
+/// A classe Codigo representa um codigo associado ao usuário.
+/// Codigo dispõe dos seguintes métodos:
+///     Métodos construtores sem e com passagem de parâmetro;
+///     Método "setValor" com passagem de parâmetro que define a string padrão;
+///     Método "getValor" sem passagem de parâmetro que obtém a string armazenada;
+///     Método "validar" com passagem de parâmetro que retorna se a string passada é válida ou não.
+
 class Codigo {
     private:
 
         //variavel padrao caso n receba nada
         const string DEFAULT = "XXXXX";
-        //definindo a variavel que sera usada para atribui�ao de valor
+        //definindo a variavel que sera usada para atribuiçao de valor
         string valor;
     public:
         //primeiro metodo construtor no caso de nao aver nada 'Email()'
@@ -33,12 +40,19 @@ inline string Codigo::getValor(){
     return valor;
 };
 
+/// A classe Classe recebe um número inteiro referente as categorias de imóveis.
+/// Classe dispõe dos seguintes métodos:
+///     Métodos construtores sem e com passagem de parâmetro;
+///     Método "setValor" com passagem de parâmetro que define a string padrão;
+///     Método "getValor" sem passagem de parâmetro que obtém a string armazenada;
+///     Método "validar" com passagem de parâmetro que retorna se o número passado é válido ou não.
+
 class Classe {
     private:
 
         //variavel padrao caso n receba nada
         const int DEFAULT = 1;
-        //definindo a variavel que sera usada para atribui�ao de valor
+        //definindo a variavel que sera usada para atribuiçao de valor
         int valor;
     public:
         //primeiro metodo construtor no caso de nao aver nada 'Email()'
@@ -58,12 +72,19 @@ inline int Classe::getValor(){
     return valor;
 };
 
+/// A classe Descricao recebe uma string referente as caracteristicas dos imóveis.
+/// Descricao dispõe dos seguintes métodos:
+///     Métodos construtores sem e com passagem de parâmetro;
+///     Método "setValor" com passagem de parâmetro que define a string padrão;
+///     Método "getValor" sem passagem de parâmetro que obtém a string armazenada;
+///     Método "validar" com passagem de parâmetro que retorna se a string passada é válida ou não.
+
 class Descricao {
     private:
 
         //variavel padrao caso n receba nada
         const string DEFAULT = "123456";
-        //definindo a variavel que sera usada para atribui�ao de valor
+        //definindo a variavel que sera usada para atribuiçao de valor
         string valor;
     public:
         //primeiro metodo construtor no caso de nao aver nada 'Email()'
@@ -78,12 +99,19 @@ class Descricao {
         bool validar (string);
 };
 
+/// A classe Endereco recebe uma string referente endereço do imóveil.
+/// Endereco dispõe dos seguintes métodos:
+///     Métodos construtores sem e com passagem de parâmetro;
+///     Método "setValor" com passagem de parâmetro que define a string padrão;
+///     Método "getValor" sem passagem de parâmetro que obtém a string armazenada;
+///     Método "validar" com passagem de parâmetro que retorna se a string passada é válida ou não.
+
 class Endereco {
     private:
 
         //variavel padrao caso n receba nada
         const string DEFAULT = "Conj 08 lote 14.5";
-        //definindo a variavel que sera usada para atribui�ao de valor
+        //definindo a variavel que sera usada para atribuiçao de valor
         string valor;
     public:
         //primeiro metodo construtor no caso de nao aver nada 'Email()'
@@ -108,12 +136,19 @@ inline string Descricao::getValor(){
     return valor;
 };
 
+/// A classe Data recebe strings referente as datas de aluguel do imóveil.
+/// Data dispõe dos seguintes métodos:
+///     Métodos construtores sem e com passagem de parâmetro;
+///     Método "setValor" com passagem de parâmetro que define a string padrão;
+///     Método "getValor" sem passagem de parâmetro que obtém a string armazenada;
+///     Método "validar" com passagem de parâmetro que retorna se a string passada é válida ou não.
+
 class Data {
     private:
 
         //variavel padrao caso n receba nada
         const string DEFAULT = "DD-MM-AA";
-        //definindo a variavel que sera usada para atribui�ao de valor
+        //definindo a variavel que sera usada para atribuiçao de valor
         string valor;
     public:
         //primeiro metodo construtor no caso de nao aver nada 'Email()'
@@ -133,12 +168,12 @@ inline string Data::getValor(){
     return valor;
 };
 
-/// Classe de dom�nio Numero representa a quantidade de h�spedes.
-/// N�mero disp�e dos seguintes m�todos:
-///     M�todos construtores sem e com passagem de par�metro;
-///     M�todo "setValor" com passagem de par�metro que define valor;
-///     M�todo "getValor" sem passagem de par�metro que obt�m valor;
-///     M�todo "validar" com passagem de par�metro que retorna se o valor passado � v�lido ou n�o.
+/// Classe de domínio Numero representa a quantidade de hóspedes.
+/// Numero dispõe dos seguintes métodos:
+///     Métodos construtores sem e com passagem de parâmetro;
+///     Método "setValor" com passagem de parâmetro que define valor;
+///     Método "getValor" sem passagem de parâmetro que obtém valor;
+///     Método "validar" com passagem de parâmetro que retorna se o valor passado é válido ou não.
 
 class Numero {
     private:
@@ -156,6 +191,13 @@ inline int Numero::getValor(){
     return valor;
 };
 
+/// Classe de domínio Moeda representa o valor monetário últilizado pelo usuário.
+/// Moeda dispõe dos seguintes métodos:
+///     Métodos construtores sem e com passagem de parâmetro;
+///     Método "setValor" com passagem de parâmetro que define valor;
+///     Método "getValor" sem passagem de parâmetro que obtém valor;
+///     Método "validar" com passagem de parâmetro que retorna se o valor passado é válido ou não.
+
 class Moeda {
     private:
         double DEFAULT = 10;
@@ -172,12 +214,19 @@ inline double Moeda::getValor(){
     return valor;
 }
 
+/// Classe de domínio Nome representa o nome do usuário.
+/// Nome dispõe dos seguintes métodos:
+///     Métodos construtores sem e com passagem de parâmetro;
+///     Método "setValor" com passagem de parâmetro que define valor;
+///     Método "getValor" sem passagem de parâmetro que obtém valor;
+///     Método "validar" com passagem de parâmetro que retorna se o valor passado é válido ou não.
+
 class Nome {
     private:
 
         //variavel padrao caso n receba nada
         const string DEFAULT = "Johnatan. Sousa";
-        //definindo a variavel que sera usada para atribui�ao de valor
+        //definindo a variavel que sera usada para atribuiçao de valor
         string valor;
     public:
         //primeiro metodo construtor no caso de nao aver nada 'Email()'
@@ -197,12 +246,20 @@ inline string Nome::getValor(){
     return valor;
 };
 
+
+/// Classe de domínio Email representa o endereço eletrônico últilizado pelo usuário.
+/// Email dispõe dos seguintes métodos:
+///     Métodos construtores sem e com passagem de parâmetro;
+///     Método "setValor" com passagem de parâmetro que define valor;
+///     Método "getValor" sem passagem de parâmetro que obtém valor;
+///     Método "validar" com passagem de parâmetro que retorna se a string passada é válida ou não.
+
 class Email {
     private:
 
         //variavel padrao caso n receba nada
-        const string DEFAULT = "nome@dom�nio";
-        //definindo a variavel que sera usada para atribui�ao de valor
+        const string DEFAULT = "nome@domínio";
+        //definindo a variavel que sera usada para atribuiçao de valor
         string valor;
     public:
         //primeiro metodo construtor no caso de nao aver nada 'Email()'
@@ -222,12 +279,20 @@ inline string Email::getValor(){
     return valor;
 };
 
+
+/// Classe de domínio Senha representa a senha de acesso últilizada pelo usuário.
+/// Senha dispõe dos seguintes métodos:
+///     Métodos construtores sem e com passagem de parâmetro;
+///     Método "setValor" com passagem de parâmetro que define valor;
+///     Método "getValor" sem passagem de parâmetro que obtém valor;
+///     Método "validar" com passagem de parâmetro que retorna se a string passada é válida ou não.
+
 class Senha {
     private:
 
         //variavel padrao caso n receba nada
         const string DEFAULT = "XXXXXX";
-        //definindo a variavel que sera usada para atribui�ao de valor
+        //definindo a variavel que sera usada para atribuiçao de valor
         string valor;
     public:
         //primeiro metodo construtor no caso de nao aver nada 'Email()'
@@ -247,12 +312,20 @@ inline string Senha::getValor(){
     return valor;
 };
 
+
+/// Classe de domínio Telefone representa o número telefônico de contato últilizado pelo usuário.
+/// Telefone dispõe dos seguintes métodos:
+///     Métodos construtores sem e com passagem de parâmetro;
+///     Método "setValor" com passagem de parâmetro que define valor;
+///     Método "getValor" sem passagem de parâmetro que obtém valor;
+///     Método "validar" com passagem de parâmetro que retorna se a string passada é válida ou não.
+
 class Telefone {
     private:
 
         //variavel padrao caso n receba nada
         const string DEFAULT = "(123)-123456789";
-        //definindo a variavel que sera usada para atribui�ao de valor
+        //definindo a variavel que sera usada para atribuiçao de valor
         string valor;
     public:
         //primeiro metodo construtor no caso de nao aver nada 'Email()'
