@@ -32,12 +32,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="n_controladorasapresentacao.cpp" />
+		<Unit filename="n_controladorasapresentacao.h" />
 		<Unit filename="n_dominios.cpp" />
 		<Unit filename="n_dominios.h" />
 		<Unit filename="n_entidades.cpp" />
 		<Unit filename="n_entidades.h" />
 		<Unit filename="n_interfaces.h" />
 		<Unit filename="n_main.cpp" />
+		<Unit filename="n_stubs.cpp" />
+		<Unit filename="n_stubs.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

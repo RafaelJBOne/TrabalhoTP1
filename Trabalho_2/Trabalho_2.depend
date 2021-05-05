@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1616104082 source:c:\users\kelson\desktop\trabalho 2\trabalho_2\n_dominios.cpp
+	"n_dominios.h"
+
+1616099916 c:\users\kelson\desktop\trabalho 2\trabalho_2\n_dominios.h
+	<iostream>
+	<stdexcept>
+
+1616091104 source:c:\users\kelson\desktop\trabalho 2\trabalho_2\n_entidades.cpp
+	"n_entidades.h"
+
+1616103788 c:\users\kelson\desktop\trabalho 2\trabalho_2\n_entidades.h
+	"n_dominios.h"
+
+1620102419 source:c:\users\kelson\desktop\trabalho 2\trabalho_2\n_main.cpp
+	<iostream>
+
+1620106241 source:c:\users\kelson\desktop\trabalho 2\trabalho_2\n_stubs.cpp
+	"n_stubs.h"
+
+1620104699 c:\users\kelson\desktop\trabalho 2\trabalho_2\n_stubs.h
+	<string>
+	"n_dominios.h"
+	"n_interfaces.h"
+
+1620015714 c:\users\kelson\desktop\trabalho 2\trabalho_2\n_interfaces.h
+	"n_dominios.h"
+	"n_entidades.h"
+
+1620107096 source:c:\users\kelson\desktop\trabalho 2\trabalho_2\n_controladorasapresentacao.cpp
+	"n_controladorasapresentacao.h"
+
+1620103949 c:\users\kelson\desktop\trabalho 2\trabalho_2\n_controladorasapresentacao.h
+	<conio.h>
+	<iostream>
+	<string.h>
+	"n_dominios.h"
+	"n_entidades.h"
+	"n_interfaces.h"
+
