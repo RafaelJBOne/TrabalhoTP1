@@ -61,8 +61,8 @@ public:
 
 class IServicoImoveis{
 public:
-        virtual bool cadastrarImoveis(Codigo) = 0;
-        virtual bool descadastrarImoveis(Codigo) = 0;
+        virtual bool cadastrarImovel(Codigo) = 0;
+        virtual bool descadastrarImovel(Codigo) = 0;
         virtual bool editarDadosDeImovel(Codigo) = 0;
         virtual ~IServicoImoveis(){}
 };

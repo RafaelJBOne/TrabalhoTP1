@@ -38,3 +38,48 @@
 	"n_entidades.h"
 	"n_interfaces.h"
 
+1620194734 source:c:\users\intel\desktop\trabalho_2\n_controladorasapresentacao.cpp
+	"n_controladorasapresentacao.h"
+
+1620175900 c:\users\intel\desktop\trabalho_2\n_controladorasapresentacao.h
+	<conio.h>
+	<iostream>
+	<string.h>
+	"n_dominios.h"
+	"n_entidades.h"
+	"n_interfaces.h"
+
+1620174348 c:\users\intel\desktop\trabalho_2\n_dominios.h
+	<iostream>
+	<stdexcept>
+
+1620174348 c:\users\intel\desktop\trabalho_2\n_entidades.h
+	"n_dominios.h"
+
+1620178119 c:\users\intel\desktop\trabalho_2\n_interfaces.h
+	"n_dominios.h"
+	"n_entidades.h"
+
+1620194734 source:c:\users\intel\desktop\trabalho_2\n_dominios.cpp
+	"n_dominios.h"
+
+1620174348 source:c:\users\intel\desktop\trabalho_2\n_entidades.cpp
+	"n_entidades.h"
+
+1620178075 source:c:\users\intel\desktop\trabalho_2\n_main.cpp
+	<string.h>
+	<stdexcept>
+	<iostream>
+	"n_dominios.h"
+	"n_interfaces.h"
+	"n_controladorasapresentacao.h"
+	"n_stubs.h"
+
+1620178352 c:\users\intel\desktop\trabalho_2\n_stubs.h
+	<string>
+	"n_dominios.h"
+	"n_interfaces.h"
+
+1620178963 source:c:\users\intel\desktop\trabalho_2\n_stubs.cpp
+	"n_stubs.h"
+

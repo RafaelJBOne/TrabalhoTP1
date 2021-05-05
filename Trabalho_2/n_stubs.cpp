@@ -21,6 +21,12 @@ bool StubServicoPessoal::cadastrarUsuario(Usuario usuario){
     return true;
 }
 
+bool StubServicoPessoal::alterar(Usuario usuario){
+    if(usuario.getemail().getValor().compare(INVALIDO) == 0)
+        return false;
+    return true;
+}
+
 /*bool StubServico::cadastrarConta(Conta conta){
     if(conta.getNumero().getValor().compare(INVALIDO) == 0)
         return false;
@@ -40,13 +46,19 @@ bool StubServicoPessoal::cadastrarUsuario(Usuario usuario){
     return true;
 }*/
 
-bool StubServicoImoveis::cadastrarImovel(Imovel imovel){
-    if(imovel.getcodigo().getValor().compare(INVALIDO) == 0)
+bool StubServicoImoveis::cadastrarImovel(Codigo codigo){
+    if(codigo.getValor().compare(INVALIDO) == 0)
         return false;
     return true;
 }
 
 bool StubServicoImoveis::descadastrarImovel(Codigo codigo){
+    if(codigo.getValor().compare(INVALIDO) == 0)
+        return false;
+    return true;
+}
+
+bool StubServicoImoveis::editarDadosDeImovel(Codigo codigo){
     if(codigo.getValor().compare(INVALIDO) == 0)
         return false;
     return true;

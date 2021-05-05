@@ -25,6 +25,8 @@ class StubServicoPessoal:public IServicoPessoal {
         static const string INVALIDO;
     public:
         bool cadastrarUsuario(Usuario);
+        bool alterar(Usuario);
+
 };
 
 //--------------------------------------------------------------------------------------------
@@ -34,8 +36,9 @@ class StubServicoImoveis:public IServicoImoveis {
     private:
         static const string INVALIDO;
     public:
-        bool cadastrarImovel(Imovel);
+        bool cadastrarImovel(Codigo);
         bool descadastrarImovel(Codigo);
+        bool editarDadosDeImovel(Codigo);
         bool realizarProposta(Proposta);
         bool recuperarProposta(Proposta*);                        // Adaptar assinatura.
 };

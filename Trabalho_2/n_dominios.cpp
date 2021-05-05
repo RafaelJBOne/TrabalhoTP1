@@ -410,10 +410,10 @@ bool Nome::validar(string valor){
     }
     // verifica se o tamanho do nome esta entre 5 e 25 e retorna se estiver dentro do parametro ou nao
     if(i >= 5 && i <=25){
-        }else{
-            return false;
-        }
-    return true;
+        return true;
+    }else{
+        return false;
+    }
 }
 
 Email::Email(){
@@ -462,6 +462,8 @@ bool Email::validar(string valor){
     if(contador_2 > 20){
         return  false;
     }
+
+    return true;
 }
 
 Senha::Senha(){
@@ -473,9 +475,12 @@ Senha::Senha(string valor){
 }
 
 void Senha::setValor(string valor){
+    cout << valor << endl;
     if (validar(valor)){
+        cout << "Com sono10cout!" << endl;
         this->valor = valor;
     }else{
+        cout << "Com sono100cout!" << endl;
         throw invalid_argument("Argumento invalido.");
     }
 }
@@ -484,6 +489,7 @@ bool Senha::validar(string valor){
     int contador = 0;
     // Se tem mais de 6 caracteres.
     if (valor[6]){
+        cout << "erro1" << endl;
         return false;
     }else{
         // Enquanto existir caractere.
@@ -494,6 +500,7 @@ bool Senha::validar(string valor){
         contador--;
         // Se existir menos de 6 caracteres.
         if (contador < 5){
+            cout << "erro2" << endl;
             return false;
         }else{
             int posicao = 0;
@@ -513,6 +520,7 @@ bool Senha::validar(string valor){
                         if (usados[posicao_2] != '\0'){
                             // Se o valor do caractere lido já foi usado.
                             if (valor_do_caractere == usados[posicao_2]){
+                                cout << "erro3" << endl;
                                 return false;
                             }
                         }
@@ -531,6 +539,7 @@ bool Senha::validar(string valor){
                         if (usados[posicao_2] != '\0'){
                             // Se o valor do caractere lido já foi usado.
                             if (valor_do_caractere == usados[posicao_2]){
+                                cout << "erro4" << endl;
                                 return false;
                             }
                         }
@@ -548,6 +557,7 @@ bool Senha::validar(string valor){
                         if (usados[posicao_2] != '\0'){
                             // Se o valor do caractere lido já foi usado.
                             if (valor_do_caractere == usados[posicao_2]){
+                                cout << "erro5" << endl;
                                 return false;
                             }
                         }
@@ -558,6 +568,7 @@ bool Senha::validar(string valor){
                     continue;
                 }
                 posicao++;
+                cout << "erro6" << endl;
                 return false;
             }
             bool bandeira_1 = false;
@@ -580,10 +591,12 @@ bool Senha::validar(string valor){
             }
             // Se algum dos formatos não foi usado.
             if (bandeira_1 == false || bandeira_2 == false || bandeira_3 == false){
+                cout << "erro7" << endl;
                 return false;
             }
         }
     }
+    cout << "acerto1" << endl;
     return true;
 }
 
